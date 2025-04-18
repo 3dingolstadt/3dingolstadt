@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://3dingolstadt.github.io/3dingolstadt/sitemap.xml
