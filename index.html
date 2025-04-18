@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="W-pl0f_oxCLVSYowJvuVyJzjVHx8hVdSqFoFl1GkXmI" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3DIN</title>
+  <style>
+    :root {
+      --bg-light: #e0e2e4;
+      --bg-dark: #121212;
+      --text-light: #1a1a1a;
+      --text-dark: #e0e0e0;
+    }
+
+    html {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: 100%;
+      height: auto;
+      max-width: 35vw;
+      animation: fadeInLogo 1.5s ease-out forwards;
+      opacity: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        max-width: 100vw;
+        max-height: 90vh;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @keyframes fadeInLogo {
+      to { opacity: 1; }
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%);
+      transform: rotate(25deg);
+      animation: shine 4s infinite;
+      z-index: 2;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) rotate(25deg); }
+      100% { transform: translateX(100%) rotate(25deg); }
+    }
+
+    .footer {
+      width: 100%;
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      z-index: 3;
+    }
+
+    .footer a {
+      display: inline-block;
+      color: inherit;
+      text-decoration: none;
+      white-space: nowrap;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .footer a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+
+    .footer /* a:hover::after {
+      transform: scaleX(1); */
+    }
+
+    .instagram-icon {
+      width: 18px; height: auto; max-width: 18px;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+  </div>
+  <div class="footer">
+    <a href="legal.html">📄 Impressum & Datenschutz</a>
+    <a href="kontakt.html">✉️ Kontakt</a>
+    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
+      📸 Instagram <img class="instagram-icon" style="width:18px; height:auto; max-width:18px;" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+    </a>
+  </div>
+</body>
+</html>
