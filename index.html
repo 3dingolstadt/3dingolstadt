@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <style>
-    html.dark {
-      filter: invert(1) hue-rotate(180deg);
-    }
-  </style>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="W-pl0f_oxCLVSYowJvuVyJzjVHx8hVdSqFoFl1GkXmI" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -136,19 +131,6 @@
   </style>
 </head>
 <body>
-
-<script>
-  function toggleDarkMode() {
-    const html = document.documentElement;
-    html.classList.toggle('dark');
-    const audio = document.getElementById("switch-sound");
-    audio.currentTime = 0;
-    audio.play();
-  }
-</script>
-<a onclick="toggleDarkMode()" style="position: fixed; top: 1rem; left: 1rem; cursor: pointer; z-index: 999;">🌓</a>
-<audio id="switch-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_10ae4197d0.mp3"></audio>
-
   <div class="container">
     <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
   </div>
