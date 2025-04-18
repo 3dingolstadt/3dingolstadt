@@ -67,7 +67,21 @@
       to { opacity: 1; }
     }
 
-    
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%);
+      transform: rotate(25deg);
+      animation: shine 4s infinite;
+      z-index: 2;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) rotate(25deg); }
       100% { transform: translateX(100%) rotate(25deg); }
     }
 
@@ -110,24 +124,35 @@
     }
 
     .instagram-icon {
-      width: 18px; height: auto; max-width: 18px;
+      width: 18px; height: 18px; max-width: 100px;
       vertical-align: middle;
       margin-left: 5px;
     }
   </style>
 </head>
 <body>
+
+<script>
+  function toggleDarkMode() {
+    const html = document.documentElement;
+    html.classList.toggle('dark');
+    const audio = document.getElementById("switch-sound");
+    audio.currentTime = 0;
+    audio.play();
+  }
+</script>
+<a onclick="toggleDarkMode()" style="position: fixed; top: 1rem; left: 1rem; cursor: pointer; z-index: 999;">🌓</a>
+<audio id="switch-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_10ae4197d0.mp3"></audio>
+
   <div class="container">
     <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
   </div>
-  
-  <div class="footer" style="position: absolute; bottom: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
+  <div class="footer">
     <a href="legal.html">📄 Impressum & Datenschutz</a>
     <a href="kontakt.html">✉️ Kontakt</a>
     <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 18px; height: auto; vertical-align: middle;" />
+      📸 Instagram <img class="instagram-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
     </a>
   </div>
-
 </body>
 </html>
