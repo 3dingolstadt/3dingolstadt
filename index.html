@@ -13,20 +13,32 @@
       background-color: #c4c5c8;
       font-family: sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .container {
+      display: flex;
       flex-direction: column;
-      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
     }
 
     .logo {
-      max-width: 90vw;
-      max-height: 80vh;
+      max-width: 40vw;
+      width: 100%;
       height: auto;
-      width: auto;
       animation: fadeIn 1.5s ease-out forwards;
       opacity: 0;
       filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        max-width: 80vw;
+      }
     }
 
     @keyframes fadeIn {
@@ -34,19 +46,17 @@
     }
 
     .footer {
-      position: absolute;
-      bottom: 1rem;
       width: 100%;
-      padding: 0 1rem;
-      box-sizing: border-box;
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 1rem 0;
     }
 
     .footer a {
-      display: block;
-      margin: 0.3rem 0;
+      display: inline-block;
+      margin: 0.3rem 1rem;
       color: #333;
       text-decoration: none;
-      font-size: 0.95rem;
     }
 
     .footer a:hover {
@@ -54,14 +64,16 @@
     }
 
     .instagram-icon {
-      width: 20px;
+      width: 18px;
       vertical-align: middle;
       margin-left: 5px;
     }
   </style>
 </head>
 <body>
-  <img src="logo.jpg" alt="3DIN Logo" class="logo" />
+  <div class="container">
+    <img src="logo.jpg" alt="3DIN Logo" class="logo" />
+  </div>
   <div class="footer">
     <a href="legal.html">📄 Impressum & Datenschutz</a>
     <a href="mailto:3dingolstadt@gmail.com">📧 3dingolstadt@gmail.com</a>
