@@ -7,45 +7,41 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      min-height: 100vh;
       background-color: #c4c5c8;
       font-family: sans-serif;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      box-sizing: border-box;
     }
 
     .logo {
-      max-width: 70vw;
-      max-height: 70vh;
-      width: auto;
+      width: 100%;
+      max-width: 400px;
       height: auto;
-      opacity: 0;
       animation: fadeIn 2s ease-out forwards;
-      filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+      opacity: 0;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
     }
 
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      to { opacity: 1; }
     }
 
     .footer {
-      position: fixed;
-      bottom: 20px;
-      font-size: 0.9rem;
-      color: #333;
+      margin-top: 2rem;
       text-align: center;
-      width: 100%;
+      font-size: 0.95rem;
     }
 
     .footer a {
-      text-decoration: none;
+      display: block;
+      margin: 0.3rem 0;
       color: #333;
-      margin: 0 10px;
+      text-decoration: none;
     }
 
     .footer a:hover {
@@ -62,10 +58,10 @@
 <body>
   <img src="logo.jpg" alt="3DIN Logo" class="logo" />
   <div class="footer">
-    <a href="legal.html">Impressum & Datenschutz</a> |
-    <a href="mailto:3dingolstadt@gmail.com">3dingolstadt@gmail.com</a> |
+    <a href="legal.html">📄 Impressum & Datenschutz</a>
+    <a href="mailto:3dingolstadt@gmail.com">📧 3dingolstadt@gmail.com</a>
     <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img class="instagram-icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      📸 Instagram <img class="instagram-icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
   </div>
 </body>
