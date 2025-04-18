@@ -5,12 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3DIN</title>
   <style>
+    :root {
+      --bg-light: #d0d2d4;
+      --bg-dark: #121212;
+      --text-light: #1a1a1a;
+      --text-dark: #e0e0e0;
+    }
+
+    html {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+      }
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
-      background-color: #c4c5c8;
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
@@ -21,6 +39,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .logo {
@@ -29,12 +49,8 @@
       max-width: 35vw;
       animation: fadeInLogo 1.5s ease-out forwards;
       opacity: 0;
-      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: scale(1.02);
+      position: relative;
+      z-index: 1;
     }
 
     @media (max-width: 768px) {
@@ -50,34 +66,60 @@
       to { opacity: 1; }
     }
 
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%);
+      transform: rotate(25deg);
+      animation: shine 4s infinite;
+      z-index: 2;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) rotate(25deg); }
+      100% { transform: translateX(100%) rotate(25deg); }
+    }
+
     .footer {
       width: 100%;
       text-align: center;
       font-size: 0.95rem;
       padding: 1rem 0;
-      animation: fadeInFooter 1.8s ease-out 0.3s forwards;
-      opacity: 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 0.8rem;
-    }
-
-    @keyframes fadeInFooter {
-      to { opacity: 1; }
+      z-index: 3;
     }
 
     .footer a {
       display: inline-block;
-      color: #333;
+      color: inherit;
       text-decoration: none;
       white-space: nowrap;
+      position: relative;
       transition: color 0.3s ease;
     }
 
-    .footer a:hover {
-      color: #1a1a1a;
-      text-decoration: underline;
+    .footer a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+
+    .footer a:hover::after {
+      transform: scaleX(1);
     }
 
     .instagram-icon {
@@ -89,7 +131,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="just 3DIN LOgo.png" alt="3DIN Logo" class="logo" />
+    <img src="logo.png" alt="3DIN Logo" class="logo" />
   </div>
   <div class="footer">
     <a href="legal.html">📄 Impressum & Datenschutz</a>
