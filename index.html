@@ -11,7 +11,7 @@
       height: 100%;
       width: 100%;
       background-color: #c4c5c8;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -30,9 +30,14 @@
       max-width: 40vw;
       width: 100%;
       height: auto;
-      animation: fadeIn 1.5s ease-out forwards;
+      animation: fadeInLogo 1.5s ease-out forwards;
       opacity: 0;
       filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.02);
     }
 
     @media (max-width: 768px) {
@@ -41,7 +46,7 @@
       }
     }
 
-    @keyframes fadeIn {
+    @keyframes fadeInLogo {
       to { opacity: 1; }
     }
 
@@ -50,16 +55,28 @@
       text-align: center;
       font-size: 0.95rem;
       padding: 1rem 0;
+      animation: fadeInFooter 1.8s ease-out 0.3s forwards;
+      opacity: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    @keyframes fadeInFooter {
+      to { opacity: 1; }
     }
 
     .footer a {
       display: inline-block;
-      margin: 0.3rem 1rem;
       color: #333;
       text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.3s ease;
     }
 
     .footer a:hover {
+      color: #1a1a1a;
       text-decoration: underline;
     }
 
