@@ -1,74 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="W-pl0f_oxCLVSYowJvuVyJzjVHx8hVdSqFoFl1GkXmI" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3DIN</title>
   <style>
-    :root {
-      --bg-light: #e0e2e4;
-      --bg-dark: #121212;
-      --text-light: #1a1a1a;
-      --text-dark: #e0e0e0;
-    }
-
-    html {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      html {
-        background-color: var(--bg-dark);
-        color: var(--text-dark);
-      }
-    }
-
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .container {
-      flex: 1;
+      background-color: #e0e2e4;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-      overflow: hidden;
+      height: 100vh;
+      flex-direction: column;
+      font-family: sans-serif;
     }
 
     .logo {
-      width: 100%;
-      height: auto;
-      max-width: 35vw;
-      animation: fadeInLogo 1.5s ease-out forwards;
-      opacity: 0;
-      position: relative;
-      z-index: 1;
+      max-width: 300px;
+      width: 80%;
+      transition: filter 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-      .logo {
-        max-width: 100vw;
-        max-height: 90vh;
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    @keyframes fadeInLogo {
-      to { opacity: 1; }
-    }
-
-    
-      100% { transform: translateX(100%) rotate(25deg); }
+    .logo:hover {
+      filter: grayscale(100%);
     }
 
     .footer {
@@ -76,55 +32,28 @@
       text-align: center;
       font-size: 0.95rem;
       padding: 1rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.8rem;
-      z-index: 3;
     }
 
     .footer a {
-      display: inline-block;
-      color: inherit;
       text-decoration: none;
-      white-space: nowrap;
-      position: relative;
-      transition: color 0.3s ease;
+      color: #1a1a1a;
+      margin: 0 10px;
     }
 
-    .footer a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background: currentColor;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-      transform-origin: left;
-    }
-
-    .footer /* a:hover::after {
-      transform: scaleX(1); */
-    }
-
-    .instagram-icon {
-      width: 18px; height: 18px; max-width: 100px;
+    .footer img {
+      width: 16px;
       vertical-align: middle;
-      margin-left: 5px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-  </div>
-  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0; background-color: transparent;">
-    <a href="legal.html">📄 Impressum & Datenschutz</a>
-    <a href="kontakt.html">✉️ Kontakt</a>
-    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 16px; height: auto; vertical-align: middle;" /> Instagram
+  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+  <div class="footer">
+    <a href="legal.html">Impressum & Datenschutz</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /></a>
+<a href="https://wa.me/4917695886665" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 16px; vertical-align: middle;" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
   </div>
 </body>
