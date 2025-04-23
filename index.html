@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3DIN</title>
   <style>
-    body {
-      margin: 0;
-      background-color: #c5c7ca;
+  
+    .container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      flex-direction: column;
-      font-family: sans-serif;
+      padding: 2rem;
+      background-color: #c5c7ca;
     }
 
     .logo {
-      max-width: 550px;
-      width: 80%;
+      max-width: 300px;
+      margin-right: 2rem;
       transition: filter 0.3s ease;
     }
 
@@ -27,11 +27,40 @@
       filter: grayscale(100%);
     }
 
+    .slideshow-box {
+      width: 280px;
+      height: 280px;
+      background: #e0e0e0;
+      border: 2px solid #999;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .slideshow-box img {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slideshow-box img.active {
+      opacity: 1;
+      position: relative;
+    }
+
     .footer {
+      position: fixed;
+      bottom: 0;
       width: 100%;
       text-align: center;
       font-size: 0.95rem;
       padding: 1rem 0;
+      background-color: #c5c7ca;
     }
 
     .footer a {
@@ -41,69 +70,62 @@
     }
 
     .footer img {
-      width: 16px;
+      width: 18px;
       vertical-align: middle;
     }
-  
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin: 2rem 1rem;
-      width: 90%;
-      max-width: 1200px;
-    }
 
-    .gallery img {
-      width: 100%;
-      border: 2px solid #999;
-      border-radius: 8px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
-</style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css" />
+  </style>
 </head>
 <body>
-  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+  <div class="container">
+    <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+    <div class="slideshow-box">
+      <img src="A_photograph_of_a_matte_black_vase_with_a_geometri.png" alt="Vase">
+<img src="A_photograph_features_a_geometric_black_vase_with_.png" alt="Vase">
+<img src="A_photograph_captures_a_single_black_geometric_vas.png" alt="Vase">
+<img src="A_3D-rendered_digital_image_showcases_a_black,_geo.png" alt="Vase">
+<img src="A_photograph_showcases_a_tall,_modern_vase_with_a_.png" alt="Vase">
+<img src="A_photograph_features_a_geometric,_white_ceramic_v.png" alt="Vase">
+<img src="A_photograph_features_a_geometrically_designed_vas.png" alt="Vase">
+<img src="A_digital_photograph_features_a_geometrically_face.png" alt="Vase">
+<img src="A_digital_photograph_features_a_geometric_vase_wit.png" alt="Vase">
+<img src="A_photograph_showcases_a_polygonal_vase_made_of_vi.png" alt="Vase">
+<img src="A_photograph_displays_a_blue_geometric_vase_with_a.png" alt="Vase">
+<img src="A_photograph_of_an_orange_vase_with_geometric,_min.png" alt="Vase">
+<img src="A_photograph_features_a_golden_vase_with_a_lattice.png" alt="Vase">
+    </div>
+  </div>
 
-<div class="gallery">
-  <a href="A_3D-rendered_digital_image_showcases_a_black,_geo.png"><img src="A_3D-rendered_digital_image_showcases_a_black,_geo.png" alt="Vase 1" /></a>
-  <a href="A_digital_photograph_features_a_geometric_black_vase_wit.png"><img src="A_digital_photograph_features_a_geometric_black_vase_wit.png" alt="Vase 2" /></a>
-  <a href="A_digital_photograph_features_a_geometrically_faced_blue_.png"><img src="A_digital_photograph_features_a_geometrically_faced_blue_.png" alt="Vase 3" /></a>
-  <a href="A_photograph_captures_a_single_black_geometric_vase_with.png"><img src="A_photograph_captures_a_single_black_geometric_vase_with.png" alt="Vase 4" /></a>
-  <a href="A_photograph_displays_a_blue_geometric_vase_with_multiple.png"><img src="A_photograph_displays_a_blue_geometric_vase_with_multiple.png" alt="Vase 5" /></a>
-  <a href="A_photograph_features_a_geometric_white_ceramic_vase_on.png"><img src="A_photograph_features_a_geometric_white_ceramic_vase_on.png" alt="Vase 6" /></a>
-  <a href="A_photograph_features_a_geometric_black_vase_with_a_subtl.png"><img src="A_photograph_features_a_geometric_black_vase_with_a_subtl.png" alt="Vase 7" /></a>
-  <a href="A_photograph_features_a_geometrically_designed_vase_on_a_.png"><img src="A_photograph_features_a_geometrically_designed_vase_on_a_.png" alt="Vase 8" /></a>
-  <a href="A_photograph_features_a_golden_vase_with_a_lattice_desig.png"><img src="A_photograph_features_a_golden_vase_with_a_lattice_desig.png" alt="Vase 9" /></a>
-  <a href="A_photograph_of_a_matte_black_vase_with_a_geometric_patte.png"><img src="A_photograph_of_a_matte_black_vase_with_a_geometric_patte.png" alt="Vase 10" /></a>
-  <a href="A_photograph_of_an_orange_vase_with_geometric_minimalist.png"><img src="A_photograph_of_an_orange_vase_with_geometric_minimalist.png" alt="Vase 11" /></a>
-  <a href="A_photograph_showcases_a_polygonal_vase_made_of_vibrant_.png"><img src="A_photograph_showcases_a_polygonal_vase_made_of_vibrant_.png" alt="Vase 12" /></a>
-  <a href="A_photograph_showcases_a_tall,_modern_vase_with_a_soft_.png"><img src="A_photograph_showcases_a_tall,_modern_vase_with_a_soft_.png" alt="Vase 13" /></a>
-</div>
-
-  
-  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
+  <div class="footer">
     <a href="legal.html">Impressum & Datenschutz</a>
     <a href="kontakt.html">Kontakt</a>
     <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; vertical-align: middle;" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
     <a href="https://wa.me/4917695886665" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; vertical-align: middle;" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
   </div>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"></script>
+  
 <script>
-  const lightbox = new SimpleLightbox('.gallery a', { captions: false, animationSpeed: 250 });
+  let slides = document.querySelectorAll('.slideshow-box img');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((img, i) => {
+      img.classList.remove('active');
+      if (i === index) img.classList.add('active');
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  showSlide(currentSlide);
+  setInterval(nextSlide, 3000);
 </script>
 
 </body>
