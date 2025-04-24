@@ -18,7 +18,7 @@
     }
 
     .logo {
-      max-width: 550px;
+      max-width: 300px;
       width: 80%;
       transition: filter 0.3s ease;
     }
@@ -28,37 +28,79 @@
     }
 
     .footer {
+      position: fixed;
+      bottom: 0;
       width: 100%;
       text-align: center;
       font-size: 0.95rem;
       padding: 1rem 0;
+      background-color: #c5c7ca;
     }
 
     .footer a {
       text-decoration: none;
       color: #1a1a1a;
       margin: 0 10px;
+      position: relative;
     }
 
     .footer img {
-      width: 16px;
+      width: 18px;
       vertical-align: middle;
+    }
+
+    .story-box {
+      display: none;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffffffee;
+      padding: 10px 15px;
+      border: 1px solid #999;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .footer a:hover .story-box {
+      display: block;
+    }
+
+    .story-box a.button {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 5px 10px;
+      background-color: #222;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
   <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-  
-  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
+
+  <div class="footer">
     <a href="legal.html">Impressum & Datenschutz</a>
     <a href="kontakt.html">Kontakt</a>
+
     <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; vertical-align: middle;" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      <div class="story-box">
+        <strong>Instagram-Story</strong><br>
+        <a href="https://instagram.com/3d_ingolstadt" target="_blank" class="button">Story ansehen</a>
+      </div>
     </a>
-    <a href="https://wa.me/4917695886665" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; vertical-align: middle;" />
+
+    <a href="https://www.tiktok.com/@3d.in0?_t=ZN-8vnWu4ouXiA&_r=1" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_icon_black.svg" alt="TikTok" />
+      <div class="story-box">
+        <strong>TikTok-Story</strong><br>
+        <a href="https://www.tiktok.com/@3d.in0?_t=ZN-8vnWu4ouXiA&_r=1" target="_blank" class="button">Story ansehen</a>
+      </div>
     </a>
   </div>
-
 </body>
 </html>
