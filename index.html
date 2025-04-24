@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3DIN</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #c5c7ca;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+
+    .logo {
+      max-width: 550px;
+      width: 80%;
+      transition: filter 0.3s ease;
+    }
+
+    .logo:hover {
+      filter: grayscale(100%);
+    }
+
+    .footer {
+      width: 100%;
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 1rem 0;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #1a1a1a;
+      margin: 0 10px;
+    }
+
+    .footer img {
+      width: 16px;
+      vertical-align: middle;
+    }
+  </style>
+
+<style>
+.marquee-container {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 12.5%;
+  background-color: #c5c7ca;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  z-index: 999;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+@media (max-width: 768px) {
+  .marquee-container {
+    font-size: 0.9rem;
+    width: 90%;
+    left: 5%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="marquee-container">
+  <div class="marquee">3D IN – wir drucken’s! Ob Vase, Schild, Prototyp oder ein Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
+</div>
+
+  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+  
+  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
+    <a href="legal.html">Impressum & Datenschutz</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; vertical-align: middle;" />
+    </a>
+    <a href="https://wa.me/4917695886665" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; vertical-align: middle;" />
+    </a>
+    <a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&_r=1" target="_blank" rel="noopener">
+      <img src="tiktok-icon.png" alt="TikTok" style="width: 24px; vertical-align: middle;" />
+    </a>
+  </div>
+
+</body>
+</html>
