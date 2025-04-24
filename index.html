@@ -57,14 +57,14 @@
   top: 0;
   left: 12.5%;
   background-color: #c5c7ca;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.5rem 0;
   z-index: 999;
 }
 
 .marquee {
   display: inline-block;
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 @keyframes marquee {
@@ -73,17 +73,54 @@
 }
 @media (max-width: 768px) {
   .marquee-container {
-    font-size: 0.9rem;
+    font-size: 1rem;
     width: 90%;
     left: 5%;
   }
+}
+</style>
+
+<style>
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.95rem;
+  background-color: #c5c7ca;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-center a {
+  margin: 0 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.footer img {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
 }
 </style>
 </head>
 <body>
 
 <div class="marquee-container">
-  <div class="marquee">3D IN – wir drucken’s! Ob Vase, Schild, Prototyp oder ein Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
+  <div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototypen, Dekoration oder ein Geschenk mit Wow-Effekt: Wir bringen Deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
 </div>
 
   <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
@@ -101,6 +138,21 @@
       <img src="tiktok-icon.png" alt="TikTok" style="width: 24px; vertical-align: middle;" />
     </a>
   </div>
+
+
+
+<!-- Rechtlicher Hinweis zu externen Links und Datenschutz -->
+<div style="display:none;">
+  <p><strong>Haftungsausschluss für externe Links:</strong><br>
+  Unsere Website enthält Links zu externen Websites Dritter (z. B. TikTok, Instagram, WhatsApp), auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+
+  <p><strong>Datenschutzhinweis:</strong><br>
+  Beim Klick auf externe Links (z. B. zu Social Media) können personenbezogene Daten an Dritte übertragen werden. Es gelten dann die Datenschutzrichtlinien des jeweiligen Anbieters.</p>
+
+  <p><strong>WhatsApp-Hinweis:</strong><br>
+  Wenn Sie mit uns über WhatsApp kommunizieren, beachten Sie bitte die Datenschutzrichtlinien von WhatsApp Ireland Limited. Mit dem Klick auf den Link willigen Sie in die Kommunikation über diesen Dienst ein.</p>
+</div>
+
 
 </body>
 </html>
