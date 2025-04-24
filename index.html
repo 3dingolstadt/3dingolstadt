@@ -2,66 +2,49 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3DIN</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #c5c7ca;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      font-family: sans-serif;
-    }
-
-    .logo {
-      max-width: 450px;
-      width: 80%;
-      transition: filter 0.3s ease;
-    }
-
-    .logo:hover {
-      filter: grayscale(100%);
-    }
-
-    .footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 0.95rem;
-      padding: 1rem 0;
-      background-color: #c5c7ca;
-    }
-
-    .footer a {
-      text-decoration: none;
-      color: #1a1a1a;
-      margin: 0 10px;
-    }
-
-    .footer img {
-      width: 18px;
-      height: 18px;
-      vertical-align: middle;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>3D Ingolstadt</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #bfc0c1;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        footer {
+            position: fixed;
+            bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        footer img {
+            height: 24px;
+            width: 24px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
-  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-
-  <div class="footer">
-    <a href="legal.html">Impressum & Datenschutz</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-    </a>
-    <a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&_r=1" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_icon_black.svg" alt="TikTok" />
-    </a>
-  </div>
+    <img src="just_3DIN_Logo.png" alt="3D IN Logo" style="max-width: 200px;">
+    <footer>
+        <a href="legal.html">Impressum & Datenschutz</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="https://www.instagram.com/3d_ingolstadt" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
+        </a>
+        <a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&_r=1" target="_blank">
+            <img src="tiktok-icon.png" alt="TikTok Icon">
+        </a>
+    </footer>
 </body>
 </html>
