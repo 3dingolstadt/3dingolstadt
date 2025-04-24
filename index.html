@@ -4,118 +4,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3DIN</title>
+  <title>3D IN Hex Slideshow</title>
   <style>
     body {
+      background: #c5c7ca;
       margin: 0;
-      background-color: #c5c7ca;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      flex-direction: column;
       font-family: sans-serif;
     }
 
-    .logo {
-      max-width: 550px;
-      width: 80%;
-      transition: filter 0.3s ease;
+    .logo-container {
+      position: relative;
+      width: 300px;
+      height: 260px;
+      clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+      overflow: hidden;
+      transition: all 0.4s ease-in-out;
     }
 
-    .logo:hover {
-      filter: grayscale(100%);
-    }
-
-    .footer {
+    .logo-container img.logo {
       width: 100%;
-      text-align: center;
-      font-size: 0.95rem;
-      padding: 1rem 0;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      transition: opacity 0.4s ease-in-out;
     }
 
-    .footer a {
-      text-decoration: none;
-      color: #1a1a1a;
-      margin: 0 10px;
+    .slideshow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
     }
 
-    .footer img {
-      width: 16px;
-      vertical-align: middle;
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .logo-container:hover img.logo {
+      opacity: 0;
     }
   </style>
-
-<style>
-.marquee-container {
-  width: 75%;
-  margin: 0 auto;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 12.5%;
-  background-color: #c5c7ca;
-  font-size: 1.2rem;
-  padding: 0.5rem 0;
-  z-index: 999;
-}
-
-.marquee {
-  display: inline-block;
-  animation: marquee 30s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-@media (max-width: 768px) {
-  .marquee-container {
-    font-size: 1rem;
-    width: 90%;
-    left: 5%;
-  }
-}
-</style>
 </head>
 <body>
 
-<div class="marquee-container">
-  <div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototypen, Dekoration oder ein Geschenk mit Wow-Effekt: Wir bringen Deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
-</div>
-
-  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-  
-  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
-    <a href="legal.html">Impressum & Datenschutz</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; vertical-align: middle;" />
-    </a>
-    <a href="https://wa.me/4917695886665" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; vertical-align: middle;" />
-    </a>
-    <a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&_r=1" target="_blank" rel="noopener">
-      <img src="tiktok-icon.png" alt="TikTok" style="width: 24px; vertical-align: middle;" />
-    </a>
+<div class="logo-container" id="logoSlideshow">
+  <img src="logo.jpg" class="logo" alt="Logo" />
+  <div class="slideshow" id="slideshow">
+    <!-- Bilder werden per JS eingefügt -->
   </div>
-
-
-
-<!-- Rechtlicher Hinweis zu externen Links und Datenschutz -->
-<div style="display:none;">
-  <p><strong>Haftungsausschluss für externe Links:</strong><br>
-  Unsere Website enthält Links zu externen Websites Dritter (z. B. TikTok, Instagram, WhatsApp), auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
-
-  <p><strong>Datenschutzhinweis:</strong><br>
-  Beim Klick auf externe Links (z. B. zu Social Media) können personenbezogene Daten an Dritte übertragen werden. Es gelten dann die Datenschutzrichtlinien des jeweiligen Anbieters.</p>
-
-  <p><strong>WhatsApp-Hinweis:</strong><br>
-  Wenn Sie mit uns über WhatsApp kommunizieren, beachten Sie bitte die Datenschutzrichtlinien von WhatsApp Ireland Limited. Mit dem Klick auf den Link willigen Sie in die Kommunikation über diesen Dienst ein.</p>
 </div>
 
+<script>
+  const images = ["vase1.jpg", "vase2.jpg", "vase3.jpg", "vase4.jpg"];
+  const shuffled = images.sort(() => 0.5 - Math.random());
+  const container = document.getElementById("slideshow");
+
+  shuffled.forEach((src, i) => {
+    const img = document.createElement("img");
+    img.src = src;
+    if (i === 0) img.style.opacity = "1";
+    container.appendChild(img);
+  });
+
+  let index = 0;
+  setInterval(() => {
+    const imgs = container.querySelectorAll("img");
+    imgs.forEach((img, i) => {
+      img.style.opacity = i === index ? "1" : "0";
+    });
+    index = (index + 1) % imgs.length;
+  }, 3000);
+</script>
 
 </body>
 </html>
