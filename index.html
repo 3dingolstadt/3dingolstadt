@@ -141,6 +141,46 @@
   transition: opacity 1s ease-in-out;
 }
 
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 1rem 0;
+  }
+
+  .hexagon {
+    width: 55vw !important;
+  }
+
+  .logo {
+    width: 40vw;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2vw;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 2vw;
+  }
+
+  .hexagon {
+    width: 28vw !important;
+    max-width: none;
+  }
+
+  .logo {
+    width: 30vw;
+    height: auto;
+  }
+}
+
 </style>
 
 <style>
