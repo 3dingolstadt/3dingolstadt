@@ -143,45 +143,7 @@
 
 
 @media (max-width: 1024px) and (orientation: portrait) {
-  .hero-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-    padding: 1rem 0;
-  }
-
-  .hexagon {
-    width: 55vw !important;
-  }
-
-  .logo {
-    width: 40vw;
-    margin: 1rem 0;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .hero-flex {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2vw;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding: 0 2vw;
-  }
-
-  .hexagon {
-    width: 28vw !important;
-    max-width: none;
-  }
-
-  .logo {
-    width: 30vw;
-    height: auto;
-  }
-}
-
-
+  
 .hero-flex {
   display: flex;
   align-items: center;
@@ -192,11 +154,11 @@
 }
 
 .hero-flex .hexagon {
-  width: 20vw;
+  width: 35%;
 }
 
 .hero-flex .logo {
-  width: 16vw;
+  width: 30%;
   height: auto;
 }
 
@@ -233,41 +195,9 @@
   }
 }
 
-</style>
 
-<style>
-.marquee-container {
-  width: 75%;
-  margin: 0 auto;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 12.5%;
-  background-color: #c5c7ca;
-  font-size: 1rem;
-  padding: 0.5rem 0;
-  z-index: 999;
-}
-
-.marquee {
-  display: inline-block;
-  animation: marquee 40s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-@media (max-width: 768px) {
-  .marquee-container {
-    font-size: 0.9rem;
-    width: 90%;
-    left: 5%;
-  }
-}
-
+@media (max-width: 1024px) and (orientation: landscape) {
+  
 .hero-flex {
   display: flex;
   align-items: center;
@@ -278,11 +208,11 @@
 }
 
 .hero-flex .hexagon {
-  width: 20vw;
+  width: 35%;
 }
 
 .hero-flex .logo {
-  width: 16vw;
+  width: 30%;
   height: auto;
 }
 
@@ -302,6 +232,185 @@
     margin: 1rem 0;
   }
 }
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-flex {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .hero-flex .hexagon {
+    width: 28vw;
+  }
+
+  .hero-flex .logo {
+    width: 30vw;
+  }
+}
+
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: nowrap;
+  margin-top: 5vh;
+}
+
+.hero-flex .hexagon {
+  width: 35%;
+}
+
+.hero-flex .logo {
+  width: 30%;
+  height: auto;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .hero-flex .hexagon {
+    width: 55vw;
+  }
+
+  .hero-flex .logo {
+    width: 40vw;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-flex {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .hero-flex .hexagon {
+    width: 28vw;
+  }
+
+  .hero-flex .logo {
+    width: 30vw;
+  }
+}
+
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: nowrap;
+  margin-top: 5vh;
+}
+
+.hero-flex .hexagon {
+  width: 35%;
+}
+
+.hero-flex .logo {
+  width: 30%;
+  height: auto;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .hero-flex .hexagon {
+    width: 55vw;
+  }
+
+  .hero-flex .logo {
+    width: 40vw;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-flex {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .hero-flex .hexagon {
+    width: 28vw;
+  }
+
+  .hero-flex .logo {
+    width: 30vw;
+  }
+}
+
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: nowrap;
+  margin-top: 5vh;
+}
+
+.hero-flex .hexagon {
+  width: 35%;
+}
+
+.hero-flex .logo {
+  width: 30%;
+  height: auto;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .hero-flex .hexagon {
+    width: 55vw;
+  }
+
+  .hero-flex .logo {
+    width: 40vw;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-flex {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .hero-flex .hexagon {
+    width: 28vw;
+  }
+
+  .hero-flex .logo {
+    width: 30vw;
+  }
+}
+
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .hero-flex {
