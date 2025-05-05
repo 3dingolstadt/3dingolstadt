@@ -253,5 +253,17 @@
   document.addEventListener("click", startSoundOnce);
 </script>
 
+
+<script>
+  const slideshowImagesLeft = [
+    "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png"
+  ];
+  let currentSlideLeft = 0;
+  setInterval(() => {
+    currentSlideLeft = (currentSlideLeft + 1) % slideshowImagesLeft.length;
+    document.getElementById("slideshow-image-left").src = slideshowImagesLeft[currentSlideLeft];
+  }, 3000);
+</script>
+
 </body>
 </html>
