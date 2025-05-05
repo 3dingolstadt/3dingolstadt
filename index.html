@@ -142,10 +142,35 @@
 }
 
 
-.hexagon {
-  position: relative;
-  border: 4px solid #fff;
-  box-shadow: 0 0 0 2px #000;
+.gallery-info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+}
+
+.gallery-info:hover::after {
+  content: "Echte Drucke, KI-Hintergrund";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  border-radius: 4px;
+  margin-top: 5px;
 }
 
 </style>
@@ -198,6 +223,7 @@
 
 <div class="hexagon-wrapper hexagon-left">
   <div class="hexagon">
+    <div class="gallery-info">?</div>
     <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
   </div>
 </div>
@@ -205,6 +231,7 @@
 
 <div class="hexagon-wrapper">
   <div class="hexagon">
+    <div class="gallery-info">?</div>
     <img id="slideshow-image" src="1.png" alt="Slideshow Bild">
   </div>
 </div>
@@ -284,35 +311,36 @@
 
 
 
-
-
-
 <script>
 window.onload = () => {
-  const rightImages = [
+  const slideshowImages = [
     "1.png", "2.png", "3.png", "4.png", "5.png",
     "6.png", "7.png", "8.png", "9.png", "10.png"
   ];
-  const leftImages = [
-    "11.png", "12.png", "13.png", "14.png", "15.png", 
-    "16.png", "17.png", "18.png", "19.png", "20.png"
-  ];
-
-  let rightIndex = 0;
-  let leftIndex = 0;
-
+  let currentSlide = 0;
   const rightImg = document.getElementById("slideshow-image");
+  setInterval(() => {
+    rightImg.style.opacity = 0;
+    setTimeout(() => {
+      currentSlide = (currentSlide + 1) % slideshowImages.length;
+      rightImg.src = slideshowImages[currentSlide];
+      rightImg.style.opacity = 1;
+    }, 1000);
+  }, 3000);
+
+  const slideshowImagesLeft = [
+    "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png"
+  ];
+  let currentSlideLeft = 0;
   const leftImg = document.getElementById("slideshow-image-left");
-
   setInterval(() => {
-    rightIndex = (rightIndex + 1) % rightImages.length;
-    rightImg.src = rightImages[rightIndex];
-  }, 4000);
-
-  setInterval(() => {
-    leftIndex = (leftIndex + 1) % leftImages.length;
-    leftImg.src = leftImages[leftIndex];
-  }, 4000);
+    leftImg.style.opacity = 0;
+    setTimeout(() => {
+      currentSlideLeft = (currentSlideLeft + 1) % slideshowImagesLeft.length;
+      leftImg.src = slideshowImagesLeft[currentSlideLeft];
+      leftImg.style.opacity = 1;
+    }, 1000);
+  }, 3000);
 };
 </script>
 
