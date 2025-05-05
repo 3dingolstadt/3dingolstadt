@@ -113,34 +113,6 @@
   }
 }
 
-
-.hexagon-left {
-  right: auto;
-  left: 3%;
-}
-@media (max-width: 768px) {
-  .hexagon-left {
-    position: static;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-
-.hexagon-left img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-
-/* Sanfte Überblendung */
-.hexagon img {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
 </style>
 
 <style>
@@ -188,13 +160,6 @@
 
   
 <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-
-<div class="hexagon-wrapper hexagon-left">
-  <div class="hexagon">
-    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
-  </div>
-</div>
-
 
 <div class="hexagon-wrapper">
   <div class="hexagon">
@@ -265,49 +230,6 @@
     document.removeEventListener("click", startSoundOnce);
   };
   document.addEventListener("click", startSoundOnce);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-window.onload = () => {
-  const slideshowImages = [
-    "1.png", "2.png", "3.png", "4.png", "5.png",
-    "6.png", "7.png", "8.png", "9.png", "10.png"
-  ];
-  let currentSlide = 0;
-  const rightImg = document.getElementById("slideshow-image");
-  setInterval(() => {
-    rightImg.style.opacity = 0;
-    setTimeout(() => {
-      currentSlide = (currentSlide + 1) % slideshowImages.length;
-      rightImg.src = slideshowImages[currentSlide];
-      rightImg.style.opacity = 1;
-    }, 1000);
-  }, 3000);
-
-  const slideshowImagesLeft = [
-    "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png"
-  ];
-  let currentSlideLeft = 0;
-  const leftImg = document.getElementById("slideshow-image-left");
-  setInterval(() => {
-    leftImg.style.opacity = 0;
-    setTimeout(() => {
-      currentSlideLeft = (currentSlideLeft + 1) % slideshowImagesLeft.length;
-      leftImg.src = slideshowImagesLeft[currentSlideLeft];
-      leftImg.style.opacity = 1;
-    }, 1000);
-  }, 3000);
-};
 </script>
 
 </body>
