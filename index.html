@@ -141,6 +141,36 @@
   transition: opacity 1s ease-in-out;
 }
 
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 2vw;
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem;
+  margin-top: 6vh;
+}
+
+@media (max-width: 768px) {
+  .hero-flex {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2vw;
+  }
+
+  .hexagon {
+    width: 28vw !important;
+    max-width: none;
+  }
+
+  .logo {
+    width: 30vw;
+  }
+}
+
 </style>
 
 <style>
@@ -182,25 +212,23 @@
 <audio id="bg-sound" src="3d-printer-85253.mp3" preload="auto"></audio>
 
 
+
+<div class="hero-flex">
+  <div class="hexagon hex-left">
+    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
+  </div>
+  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+  <div class="hexagon hex-right">
+    <img id="slideshow-image" src="1.png" alt="Slideshow Bild">
+  </div>
+</div>
+
 <div class="marquee-container">
   <div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
 </div>
 
   
-<img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
 
-<div class="hexagon-wrapper hexagon-left">
-  <div class="hexagon">
-    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
-  </div>
-</div>
-
-
-<div class="hexagon-wrapper">
-  <div class="hexagon">
-    <img id="slideshow-image" src="1.png" alt="Slideshow Bild">
-  </div>
-</div>
 
   
   <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
