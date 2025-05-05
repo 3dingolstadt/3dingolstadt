@@ -113,6 +113,34 @@
   }
 }
 
+
+.hexagon-left {
+  right: auto;
+  left: 3%;
+}
+@media (max-width: 768px) {
+  .hexagon-left {
+    position: static;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.hexagon-left img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Sanfte Überblendung */
+.hexagon img {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
 </style>
 
 <style>
@@ -160,6 +188,13 @@
 
   
 <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+
+<div class="hexagon-wrapper hexagon-left">
+  <div class="hexagon">
+    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
+  </div>
+</div>
+
 
 <div class="hexagon-wrapper">
   <div class="hexagon">
@@ -230,6 +265,61 @@
     document.removeEventListener("click", startSoundOnce);
   };
   document.addEventListener("click", startSoundOnce);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+window.onload = () => {
+  const rightImages = [
+    "1.png", "2.png", "3.png", "4.png", "5.png",
+    "6.png", "7.png", "8.png", "9.png", "10.png"
+  ];
+  const leftImages = [
+    "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png"
+  ];
+
+  let rightIndex = 0;
+  let leftIndex = 0;
+
+  const rightImg = document.getElementById("slideshow-image");
+  const leftImg = document.getElementById("slideshow-image-left");
+
+  rightImg.style.transition = "opacity 1.5s ease-in-out";
+  leftImg.style.transition = "opacity 1.5s ease-in-out";
+
+  function updateSlide(imgEl, images, indexRef) {
+    imgEl.style.opacity = 0;
+    setTimeout(() => {
+      indexRef.value = (indexRef.value + 1) % images.length;
+      imgEl.src = images[indexRef.value];
+      imgEl.style.opacity = 1;
+    }, 1500);
+  }
+
+  // Verwendet Objekt als Referenz für Indexwerte
+  const rightState = { value: 0 };
+  const leftState = { value: 0 };
+
+  setInterval(() => {
+    updateSlide(rightImg, rightImages, rightState);
+  }, 5000);
+
+  setInterval(() => {
+    updateSlide(leftImg, leftImages, leftState);
+  }, 5000);
+};
 </script>
 
 </body>
