@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3DIN</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #c5c7ca;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+
+    .logo {
+      max-width: 550px;
+      width: 80%;
+      transition: filter 0.3s ease;
+    }
+
+    .logo:hover {
+      filter: grayscale(100%);
+    }
+
+    .footer {
+      width: 100%;
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 1rem 0;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #1a1a1a;
+      margin: 0 10px;
+    }
+
+    .footer img {
+      width: 16px;
+      vertical-align: middle;
+    }
+  
+/* Galerie: Quadratisch, klickbar */
+.gallery-grid {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.gallery-thumb {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.gallery-thumb:hover {
+  transform: scale(1.05);
+}
+
+/* Hexagon-Rahmen */
+.hexagon-wrapper {
+  position: absolute;
+  top: 15%; /* anpassbar je nach Logo-Position */
+  right: calc(25% / 2);
+  transform: translateY(0%);
+}
+.hexagon {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(to bottom, #222, #444);
+  clip-path: polygon(
+    50% 0%, 93% 25%, 93% 75%, 50% 100%,
+    7% 75%, 7% 25%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hexagon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-thumb {
+    width: 80vw;
+    height: auto;
+  }
+
+  .hexagon-wrapper {
+    position: static;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hexagon {
+    width: 80vw;
+    max-width: 300px;
+  }
+}
+
+</style>
+
+<style>
+.marquee-container {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 12.5%;
+  background-color: #c5c7ca;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  z-index: 999;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+@media (max-width: 768px) {
+  .marquee-container {
+    font-size: 0.9rem;
+    width: 90%;
+    left: 5%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="marquee-container">
+  <div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
+</div>
+
+  
+<img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+
+<!-- Quadratische Galerie -->
+<div class="gallery-grid">
+  <img src="1.png" class="gallery-thumb" alt="Bild 1">
+  <img src="2.png" class="gallery-thumb" alt="Bild 2">
+  <img src="3.png" class="gallery-thumb" alt="Bild 3">
+  <img src="4.png" class="gallery-thumb" alt="Bild 4">
+</div>
+
+<!-- Slideshow im Hexagon -->
+<div class="hexagon-wrapper">
+  <div class="hexagon">
+    <img id="slideshow-image" src="1.png" alt="Slideshow Bild">
+  </div>
+</div>
+
+  
+  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
+    <a href="legal.html">Rechtliches</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; vertical-align: middle;" />
+    </a>
+    <a href="https://wa.me/4917695886665" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; vertical-align: middle;" />
+    </a>
+    <a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&_r=1" target="_blank" rel="noopener">
+      <img src="tiktok-icon.png" alt="TikTok" style="width: 24px; vertical-align: middle;" />
+    </a>
+  </div>
+
+
+<script>
+  // Lightbox für Galerie
+  document.querySelectorAll('.gallery-thumb').forEach(img => {
+    img.addEventListener('click', () => {
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = '100vw';
+      overlay.style.height = '100vh';
+      overlay.style.background = 'rgba(0,0,0,0.8)';
+      overlay.style.display = 'flex';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.zIndex = 9999;
+
+      const fullImg = document.createElement('img');
+      fullImg.src = img.src;
+      fullImg.style.maxWidth = '90vw';
+      fullImg.style.maxHeight = '90vh';
+      overlay.appendChild(fullImg);
+
+      overlay.addEventListener('click', () => overlay.remove());
+      document.body.appendChild(overlay);
+    });
+  });
+
+  // Slideshow für Hexagon
+  const slideshowImages = [
+    "1.png", "2.png", "3.png", "4.png", "5.png",
+    "6.png", "7.png", "8.png", "9.png", "10.png"
+  ];
+  let currentSlide = 0;
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slideshowImages.length;
+    document.getElementById("slideshow-image").src = slideshowImages[currentSlide];
+  }, 3000);
+</script>
+
+</body>
+</html>
