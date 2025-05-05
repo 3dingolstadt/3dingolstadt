@@ -280,20 +280,23 @@
 
 
 
+
+
+
 <script>
 window.onload = () => {
-  const slideshowImages = [
+  const slideshowImagesRight = [
     "1.png", "2.png", "3.png", "4.png", "5.png",
     "6.png", "7.png", "8.png", "9.png", "10.png"
   ];
-  let currentSlide = 0;
+  let currentSlideRight = 0;
   const rightImg = document.getElementById("slideshow-image");
   rightImg.style.transition = "opacity 1s ease-in-out";
   setInterval(() => {
     rightImg.style.opacity = 0;
     setTimeout(() => {
-      currentSlide = (currentSlide + 1) % slideshowImages.length;
-      rightImg.src = slideshowImages[currentSlide];
+      currentSlideRight = (currentSlideRight + 1) % slideshowImagesRight.length;
+      rightImg.src = slideshowImagesRight[currentSlideRight];
       rightImg.style.opacity = 1;
     }, 1000);
   }, 4000);
