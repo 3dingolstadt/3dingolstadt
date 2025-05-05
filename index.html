@@ -66,7 +66,7 @@
 .hexagon-wrapper {
   position: absolute;
   top: 15%; /* anpassbar je nach Logo-Position */
-  right: 3%;
+  right: 5%;
   transform: translateY(0%);
 }
 .hexagon {
@@ -151,7 +151,7 @@
 </head>
 <body>
 
-<audio id="bg-sound" src="3d-printer-85253.mp3" autoplay preload="auto"></audio>
+<audio id="bg-sound" src="3d-printer-85253.mp3" preload="auto"></audio>
 
 
 <div class="marquee-container">
@@ -220,6 +220,16 @@
     currentSlide = (currentSlide + 1) % slideshowImages.length;
     document.getElementById("slideshow-image").src = slideshowImages[currentSlide];
   }, 3000);
+</script>
+
+
+<script>
+  const sound = document.getElementById("bg-sound");
+  const startSoundOnce = () => {
+    sound.play().catch(e => console.log("Audio blocked:", e));
+    document.removeEventListener("click", startSoundOnce);
+  };
+  document.addEventListener("click", startSoundOnce);
 </script>
 
 </body>
