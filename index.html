@@ -182,30 +182,34 @@
 }
 
 
-body {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #1a1a1a; /* Fallback */
+.logo-mobile {
+  display: none;
+  width: 40vw;
+  margin: 1rem auto;
 }
-
-
-body {
-  color: white;
-}
-
-.marquee-container {
-  margin-top: 2rem;
-color: white;
+@media (max-width: 768px) {
+  .logo-mobile {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
 }
 
 </style>
 
 <style>
 .marquee-container {
-  margin-top: 2rem;
-font-size: 1rem;
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 12.5%;
+  background-color: #c5c7ca;
+  font-size: 1rem;
   padding: 0.5rem 0;
   z-index: 999;
 }
@@ -221,29 +225,24 @@ font-size: 1rem;
 }
 @media (max-width: 768px) {
   .marquee-container {
-  margin-top: 2rem;
     font-size: 0.9rem;
     width: 90%;
     left: 5%;
   }
 }
 
-body {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #1a1a1a; /* Fallback */
+.logo-mobile {
+  display: none;
+  width: 40vw;
+  margin: 1rem auto;
 }
-
-
-body {
-  color: white;
-}
-
-.marquee-container {
-  margin-top: 2rem;
-color: white;
+@media (max-width: 768px) {
+  .logo-mobile {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
 }
 
 </style>
@@ -264,6 +263,7 @@ color: white;
   <div class="hexagon">
     <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
   </div>
+<img src="just_3DIN_Logo.png" alt="3DIN Logo Mobil" class="logo-mobile" />
 </div>
 
 
