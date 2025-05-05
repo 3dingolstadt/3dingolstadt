@@ -325,6 +325,9 @@
 
 
 
+
+
+
 <script>
 window.onload = () => {
   const rightImages = [
@@ -332,8 +335,8 @@ window.onload = () => {
     "6.png", "7.png", "8.png", "9.png", "10.png"
   ];
   const leftImages = [
-    "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", 
-    "17.png", "18.png", "19.png", "20.png"
+    "11.png", "12.png", "13.png", "14.png", "15.png",
+    "16.png", "17.png", "18.png", "19.png", "20.png"
   ];
 
   let rightIndex = 0;
@@ -342,29 +345,15 @@ window.onload = () => {
   const rightImg = document.getElementById("slideshow-image");
   const leftImg = document.getElementById("slideshow-image-left");
 
-  rightImg.style.transition = "opacity 1.5s ease-in-out";
-  leftImg.style.transition = "opacity 1.5s ease-in-out";
-
-  function updateSlide(imgEl, images, indexRef) {
-    imgEl.style.opacity = 0;
-    setTimeout(() => {
-      indexRef.value = (indexRef.value + 1) % images.length;
-      imgEl.src = images[indexRef.value];
-      imgEl.style.opacity = 1;
-    }, 1500);
-  }
-
-  // Verwendet Objekt als Referenz für Indexwerte
-  const rightState = { value: 0 };
-  const leftState = { value: 0 };
+  setInterval(() => {
+    rightIndex = (rightIndex + 1) % rightImages.length;
+    rightImg.src = rightImages[rightIndex];
+  }, 3000);
 
   setInterval(() => {
-    updateSlide(rightImg, rightImages, rightState);
-  }, 5000);
-
-  setInterval(() => {
-    updateSlide(leftImg, leftImages, leftState);
-  }, 5000);
+    leftIndex = (leftIndex + 1) % leftImages.length;
+    leftImg.src = leftImages[leftIndex];
+  }, 3000);
 };
 </script>
 
