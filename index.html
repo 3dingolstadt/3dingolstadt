@@ -82,13 +82,11 @@
   justify-content: center;
   overflow: hidden;
 }
-
 .hexagon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; max-width: 90%; max-height: 90%;
 }
-
 
 
 @media (max-width: 768px) {
@@ -138,13 +136,10 @@
 
 
 /* Sanfte Überblendung */
-
 .hexagon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
-
 
 
 @media (max-width: 1024px) and (orientation: portrait) {
@@ -186,73 +181,6 @@
   }
 }
 
-
-
-@media (min-width: 1025px) {
-  .hero-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-    flex-wrap: nowrap;
-    margin-top: 5vh;
-  }
-
-  .hero-flex .hexagon {
-    width: 35%;
-  }
-
-  .hero-flex .logo {
-    width: 30%;
-    height: auto;
-  }
-}
-
-
-  .hero-flex .logo {
-    width: 30%;
-    height: auto;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-  .hero-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-    padding: 1rem 0;
-  }
-
-  .hero-flex .hexagon {
-    width: 55vw;
-  }
-
-  .hero-flex .logo {
-    width: 40vw;
-    margin: 1rem 0;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .hero-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-    padding: 0 2vw;
-  }
-
-  .hero-flex .hexagon {
-    width: 28vw;
-  }
-
-  .hero-flex .logo {
-    width: 30vw;
-  }
-}
-
 </style>
 
 <style>
@@ -287,73 +215,6 @@
     left: 5%;
   }
 }
-
-
-@media (min-width: 1025px) {
-  .hero-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-    flex-wrap: nowrap;
-    margin-top: 5vh;
-  }
-
-  .hero-flex .hexagon {
-    width: 35%;
-  }
-
-  .hero-flex .logo {
-    width: 30%;
-    height: auto;
-  }
-}
-
-
-  .hero-flex .logo {
-    width: 30%;
-    height: auto;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-  .hero-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-    padding: 1rem 0;
-  }
-
-  .hero-flex .hexagon {
-    width: 55vw;
-  }
-
-  .hero-flex .logo {
-    width: 40vw;
-    margin: 1rem 0;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .hero-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-    padding: 0 2vw;
-  }
-
-  .hero-flex .hexagon {
-    width: 28vw;
-  }
-
-  .hero-flex .logo {
-    width: 30vw;
-  }
-}
-
 </style>
 </head>
 <body>
@@ -361,23 +222,25 @@
 <audio id="bg-sound" src="3d-printer-85253.mp3" preload="auto"></audio>
 
 
-
-<div class="hero-flex">
-  <div class="hexagon">
-    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links" />
-  </div>
-  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-  <div class="hexagon">
-    <img id="slideshow-image" src="1.png" alt="Slideshow Bild Rechts" />
-  </div>
-</div>
-
 <div class="marquee-container">
   <div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
 </div>
 
   
+<img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
 
+<div class="hexagon-wrapper hexagon-left">
+  <div class="hexagon">
+    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
+  </div>
+</div>
+
+
+<div class="hexagon-wrapper">
+  <div class="hexagon">
+    <img id="slideshow-image" src="1.png" alt="Slideshow Bild">
+  </div>
+</div>
 
   
   <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
