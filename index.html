@@ -89,13 +89,7 @@
 }
 
 
-@media (max-width: 768px) {
-  .gallery-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery-thumb {
+.gallery-thumb {
     width: 80vw;
     height: auto;
   }
@@ -118,13 +112,6 @@
   right: auto;
   left: 3%;
 }
-@media (max-width: 768px) {
-  .hexagon-left {
-    position: static;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
 }
 
 
@@ -139,6 +126,58 @@
 .hexagon img {
   opacity: 1;
   transition: opacity 1s ease-in-out;
+}
+
+
+.hexagon {
+    width: 28vw !important;
+    max-width: none;
+  }
+
+  .logo {
+    width: 30vw;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 1rem 0;
+  }
+
+  .hexagon {
+    width: 55vw !important;
+  }
+
+  .logo {
+    width: 40vw;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2vw;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 2vw;
+  }
+
+  .hexagon {
+    width: 28vw !important;
+    max-width: none;
+  }
+
+  .logo {
+    width: 30vw;
+    height: auto;
+  }
 }
 
 </style>
@@ -168,12 +207,6 @@
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
-@media (max-width: 768px) {
-  .marquee-container {
-    font-size: 0.9rem;
-    width: 90%;
-    left: 5%;
-  }
 }
 </style>
 </head>
