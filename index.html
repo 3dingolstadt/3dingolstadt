@@ -69,10 +69,8 @@
   right: 3%;
   transform: translateY(0%);
 }
-
-
 .hexagon {
-  width: 20vw;
+  width: 35vw;
   aspect-ratio: 1 / 1;
   background: linear-gradient(to bottom, #222, #444);
   clip-path: polygon(
@@ -83,10 +81,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: inset 0 0 10px rgba(255,255,255,0.08), 0 0 8px rgba(0,0,0,0.5);
 }
-
-
 .hexagon img {
   width: 100%;
   height: 100%;
@@ -112,73 +107,11 @@
     justify-content: center;
   }
 
-  
-
-.hexagon {
-  width: 20vw;
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(to bottom, #222, #444);
-  clip-path: polygon(
-    50% 0%, 93% 25%, 93% 75%, 50% 100%,
-    7% 75%, 7% 25%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: inset 0 0 10px rgba(255,255,255,0.08), 0 0 8px rgba(0,0,0,0.5);
-}
-
-
-}
-
-
-.hexagon-left {
-  right: auto;
-  left: 3%;
-}
-@media (max-width: 768px) {
-  .hexagon-left {
-    position: static;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
+  .hexagon {
+    width: 80vw;
+    max-width: 35vw;
   }
 }
-
-
-.hexagon-left img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-
-/* Sanfte Überblendung */
-.hexagon img {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-
-
-
-.hexagon {
-  width: 20vw;
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(to bottom, #222, #444);
-  clip-path: polygon(
-    50% 0%, 93% 25%, 93% 75%, 50% 100%,
-    7% 75%, 7% 25%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: inset 0 0 10px rgba(255,255,255,0.08), 0 0 8px rgba(0,0,0,0.5);
-}
-
-
 
 </style>
 
@@ -227,13 +160,6 @@
 
   
 <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-
-<div class="hexagon-wrapper hexagon-left">
-  <div class="hexagon">
-    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
-  </div>
-</div>
-
 
 <div class="hexagon-wrapper">
   <div class="hexagon">
@@ -304,47 +230,6 @@
     document.removeEventListener("click", startSoundOnce);
   };
   document.addEventListener("click", startSoundOnce);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-window.onload = () => {
-  const rightImages = [
-    "1.png", "2.png", "3.png", "4.png", "5.png",
-    "6.png", "7.png", "8.png", "9.png", "10.png"
-  ];
-  const leftImages = [
-    "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png"
-  ];
-
-  let rightIndex = 0;
-  let leftIndex = 0;
-
-  const rightImg = document.getElementById("slideshow-image");
-  const leftImg = document.getElementById("slideshow-image-left");
-
-  setInterval(() => {
-    rightIndex = (rightIndex + 1) % rightImages.length;
-    rightImg.src = rightImages[rightIndex];
-  }, 3000);
-
-  setInterval(() => {
-    leftIndex = (leftIndex + 1) % leftImages.length;
-    leftImg.src = leftImages[leftIndex];
-  }, 3000);
-};
 </script>
 
 </body>
