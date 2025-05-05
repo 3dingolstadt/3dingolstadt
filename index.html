@@ -280,41 +280,45 @@
 
 
 
-
-
-
 <script>
 window.onload = () => {
-  const slideshowImagesRight = [
+  const rightImages = [
     "1.png", "2.png", "3.png", "4.png", "5.png",
     "6.png", "7.png", "8.png", "9.png", "10.png"
   ];
-  let currentSlideRight = 0;
-  const rightImg = document.getElementById("slideshow-image");
-  rightImg.style.transition = "opacity 1s ease-in-out";
-  setInterval(() => {
-    rightImg.style.opacity = 0;
-    setTimeout(() => {
-      currentSlideRight = (currentSlideRight + 1) % slideshowImagesRight.length;
-      rightImg.src = slideshowImagesRight[currentSlideRight];
-      rightImg.style.opacity = 1;
-    }, 1000);
-  }, 4000);
-
-  const slideshowImagesLeft = [
+  const leftImages = [
     "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png"
   ];
-  let currentSlideLeft = 0;
+
+  let rightIndex = 0;
+  let leftIndex = 0;
+
+  const rightImg = document.getElementById("slideshow-image");
   const leftImg = document.getElementById("slideshow-image-left");
-  leftImg.style.transition = "opacity 1s ease-in-out";
-  setInterval(() => {
-    leftImg.style.opacity = 0;
+
+  rightImg.style.transition = "opacity 1.5s ease-in-out";
+  leftImg.style.transition = "opacity 1.5s ease-in-out";
+
+  function updateSlide(imgEl, images, indexRef) {
+    imgEl.style.opacity = 0;
     setTimeout(() => {
-      currentSlideLeft = (currentSlideLeft + 1) % slideshowImagesLeft.length;
-      leftImg.src = slideshowImagesLeft[currentSlideLeft];
-      leftImg.style.opacity = 1;
-    }, 1000);
-  }, 4000);
+      indexRef.value = (indexRef.value + 1) % images.length;
+      imgEl.src = images[indexRef.value];
+      imgEl.style.opacity = 1;
+    }, 1500);
+  }
+
+  // Verwendet Objekt als Referenz für Indexwerte
+  const rightState = { value: 0 };
+  const leftState = { value: 0 };
+
+  setInterval(() => {
+    updateSlide(rightImg, rightImages, rightState);
+  }, 5000);
+
+  setInterval(() => {
+    updateSlide(leftImg, leftImages, leftState);
+  }, 5000);
 };
 </script>
 
