@@ -141,6 +141,13 @@
   transition: opacity 1s ease-in-out;
 }
 
+
+.hexagon {
+  position: relative;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 2px #000;
+}
+
 </style>
 
 <style>
@@ -296,29 +303,15 @@ window.onload = () => {
   const rightImg = document.getElementById("slideshow-image");
   const leftImg = document.getElementById("slideshow-image-left");
 
-  rightImg.style.transition = "opacity 1.5s ease-in-out";
-  leftImg.style.transition = "opacity 1.5s ease-in-out";
-
-  function updateSlide(imgEl, images, indexRef) {
-    imgEl.style.opacity = 0;
-    setTimeout(() => {
-      indexRef.value = (indexRef.value + 1) % images.length;
-      imgEl.src = images[indexRef.value];
-      imgEl.style.opacity = 1;
-    }, 1500);
-  }
-
-  // Verwendet Objekt als Referenz für Indexwerte
-  const rightState = { value: 0 };
-  const leftState = { value: 0 };
+  setInterval(() => {
+    rightIndex = (rightIndex + 1) % rightImages.length;
+    rightImg.src = rightImages[rightIndex];
+  }, 3000);
 
   setInterval(() => {
-    updateSlide(rightImg, rightImages, rightState);
-  }, 5000);
-
-  setInterval(() => {
-    updateSlide(leftImg, leftImages, leftState);
-  }, 5000);
+    leftIndex = (leftIndex + 1) % leftImages.length;
+    leftImg.src = leftImages[leftIndex];
+  }, 3000);
 };
 </script>
 
