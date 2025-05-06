@@ -7,26 +7,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>3DIN</title>
 <style>
-
-
-#led-counter {
-  position: fixed;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  background: #0f0f0f;
-  color: white;
-  font-family: 'Courier New', monospace;
-  font-size: 0.5rem;
-  letter-spacing: 0.1rem;
-  padding: 0.2rem 0.4rem;
-  border: 1px inset #555;
-  box-shadow: 0 0 4px #ffffff55;
-  z-index: 1000;
-}
-
-
-
-
     body {
       margin: 0;
       background: url('background.png') no-repeat center center fixed;
@@ -219,6 +199,33 @@
   }
 }
 
+
+
+.footer a {
+  position: relative;
+}
+
+.footer a .icon-label {
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.footer a:hover .icon-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
 </style>
 <style>
 .marquee-container {
@@ -292,19 +299,18 @@
 <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
 <a href="legal.html">Rechtliches</a>
 <a href="kontakt.html">Kontakt</a>
-<a href="https://instagram.com/3d_ingolstadt" rel="noopener" target="_blank">
+<a href="https://instagram.com/3d_ingolstadt" rel="noopener" target="_blank" title="Instagram">
 <img alt="Instagram" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" style="width: 24px; vertical-align: middle;"/>
-</a>
-<a href="https://wa.me/4917695886665" rel="noopener" target="_blank">
+<span class="icon-label">Instagram</span></a>
+<a href="https://wa.me/4917695886665" rel="noopener" target="_blank" title="WhatsApp">
 <img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 24px; vertical-align: middle;"/>
-</a>
-  <a class="footer-icon" href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" target="_blank">
-<img alt="Kleinanzeigen" src="kleinanzeigen.svg" style="width: 24px; height: 24px;"/>
-</a>
-<a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&amp;_r=1" rel="noopener" target="_blank">
+<span class="icon-label">WhatsApp</span></a>
+<a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&amp;_r=1" rel="noopener" target="_blank" title="TikTok">
 <img alt="TikTok" src="tiktok-icon.png" style="width: 24px; vertical-align: middle;"/>
-</a>
-
+<span class="icon-label">TikTok</span></a>
+<a class="footer-icon" href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" target="_blank" title="Kleinanzeigen">
+<img alt="Kleinanzeigen" src="kleinanzeigen.svg" style="width: 24px; height: 24px;"/>
+<span class="icon-label">Kleinanzeigen</span></a>
 </div>
 <script>
   // Lightbox für Galerie
@@ -380,14 +386,5 @@ window.onload = () => {
   }, 3000);
 };
 </script>
-<div id="led-counter">
-<div id="sfcturhurzjrg5ypkyzmqh8ertz5qnlr1fn"></div>
-</div>
-<script async="" src="https://counter4.optistats.ovh/private/counter.js?c=turhurzjrg5ypkyzmqh8ertz5qnlr1fn&amp;down=async" type="text/javascript"></script>
-<noscript>
-<a href="https://www.freecounterstat.com" title="free website counter">
-<img alt="free website counter" border="0" src="https://counter4.optistats.ovh/private/freecounterstat.php?c=turhurzjrg5ypkyzmqh8ertz5qnlr1fn" title="free website counter"/>
-</a>
-</noscript>
 </body>
 </html>
