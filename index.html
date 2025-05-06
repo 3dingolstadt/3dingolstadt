@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3DIN</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=1024" name="viewport"/>
+<title>3DIN</title>
+<style>
     body {
       margin: 0;
       background: url('background.png') no-repeat center center fixed;
@@ -19,7 +20,7 @@
     }
 
     .logo {
-      max-width: 650px;
+      max-width: clamp(200px, 30vw, 650px);
       width: 80%;
       transition: filter 0.3s ease;
     }
@@ -31,7 +32,7 @@
     .footer {
       width: 100%;
       text-align: center;
-      font-size: 0.95rem;
+      font-size: clamp(0.8rem, 1vw, 1rem);
       padding: 1rem 0;
     }
 
@@ -72,7 +73,7 @@
   transform: translateY(0%);
 }
 .hexagon {
-  width: 35vw;
+  width: clamp(150px, 30vw, 400px);
   aspect-ratio: 1 / 1;
   background: linear-gradient(to bottom, #222, #444);
   clip-path: polygon(
@@ -91,11 +92,7 @@
 }
 
 
-@media (max-width: 768px) {
-  .gallery-grid {
-    flex-direction: column;
-    align-items: center;
-  }
+
 
   .gallery-thumb {
     width: 80vw;
@@ -110,7 +107,7 @@
   }
 
   .hexagon {
-    width: 80vw;
+    width: clamp(150px, 30vw, 400px);
     max-width: 35vw;
   }
 }
@@ -120,13 +117,7 @@
   right: auto;
   left: 3%;
 }
-@media (max-width: 768px) {
-  .hexagon-left {
-    position: static;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
+
 }
 
 
@@ -144,41 +135,27 @@
 }
 
 
-@media (max-width: 1024px) and (orientation: portrait) {
-  .hero-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-    padding: 1rem 0;
-  }
+
 
   .hexagon {
-    width: 55vw !important;
+    width: clamp(150px, 30vw, 400px);
   }
 
   .logo {
-    width: 40vw;
+    width: clamp(200px, 30vw, 650px);
     margin: 1rem 0;
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
-  .hero-flex {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2vw;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding: 0 2vw;
-  }
+
 
   .hexagon {
-    width: 28vw !important;
+    width: clamp(150px, 30vw, 400px);
     max-width: none;
   }
 
   .logo {
-    width: 30vw;
+    width: clamp(200px, 30vw, 650px);
     height: auto;
   }
 }
@@ -189,54 +166,13 @@
   width: 40vw;
   margin: 1rem auto;
 }
-@media (max-width: 768px) {
-  .logo-mobile {
-    display: block;
-  }
+
   .logo {
     display: none;
   }
 }
 
-
-@media only screen and (orientation: landscape) and (max-width: 812px) {
-  html {
-    transform: scale(0.8);
-    transform-origin: top center;
-  }
-}
-
-
-@media screen and (max-width: 950px) and (orientation: landscape) and (pointer: coarse) {
-  .logo {
-    width: 40vw !important;
-  }
-
-  .hexagon {
-    width: 30vw !important;
-  }
-
-  .marquee-container {
-    font-size: 0.85rem !important;
-    padding: 0.3rem 0 !important;
-  }
-
-  .footer {
-    font-size: 0.8rem !important;
-  }
-
-  .footer img {
-    width: 20px !important;
-  }
-
-  .gallery-thumb {
-    width: 180px !important;
-    height: 180px !important;
-  }
-}
-
 </style>
-
 <style>
 .marquee-container {
   color: white;
@@ -250,7 +186,7 @@
   left: 12.5%;
   background: url('background.png') no-repeat center center fixed;
       background-size: cover;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
   padding: 0.5rem 0;
   z-index: 999;
 }
@@ -264,13 +200,7 @@
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
-@media (max-width: 768px) {
-  .marquee-container {
-  color: white;
-    font-size: 0.9rem;
-    width: 90%;
-    left: 5%;
-  }
+
 }
 
 .logo-mobile {
@@ -278,10 +208,7 @@
   width: 40vw;
   margin: 1rem auto;
 }
-@media (max-width: 768px) {
-  .logo-mobile {
-    display: block;
-  }
+
   .logo {
     display: none;
   }
@@ -290,52 +217,38 @@
 </style>
 </head>
 <body>
-
-<audio id="bg-sound" src="3d-printer-85253.mp3" preload="auto"></audio>
-
-
+<audio id="bg-sound" preload="auto" src="3d-printer-85253.mp3"></audio>
 <div class="marquee-container">
-  <div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
+<div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
 </div>
-
-  
-<img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-
+<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png"/>
 <div class="hexagon-wrapper hexagon-left">
-  <div class="hexagon">
-    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
-  </div>
-<img src="just_3DIN_Logo.png" alt="3DIN Logo Mobil" class="logo-mobile" />
+<div class="hexagon">
+<img alt="Slideshow Bild Links" id="slideshow-image-left" src="11.png"/>
 </div>
-
-
+<img alt="3DIN Logo Mobil" class="logo-mobile" src="just_3DIN_Logo.png">
+</img></div>
 <div class="hexagon-wrapper">
-  <div class="hexagon">
-    <img id="slideshow-image" src="1.png" alt="Slideshow Bild">
-  </div>
+<div class="hexagon">
+<img alt="Slideshow Bild" id="slideshow-image" src="1.png"/>
 </div>
-
-  
-  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
-    <a href="legal.html">Rechtliches</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; vertical-align: middle;" />
-    </a>
-    <a href="https://wa.me/4917695886665" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; vertical-align: middle;" />
-    </a>
-    <a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&_r=1" target="_blank" rel="noopener">
-      <img src="tiktok-icon.png" alt="TikTok" style="width: 24px; vertical-align: middle;" />
-    </a>
-  
-<a href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" 
-   target="_blank" class="footer-icon">
-  <img src="kleinanzeigen.svg" alt="Kleinanzeigen" style="width: 24px; height: 24px;" />
+</div>
+<div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
+<a href="legal.html">Rechtliches</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="https://instagram.com/3d_ingolstadt" rel="noopener" target="_blank">
+<img alt="Instagram" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" style="width: 24px; vertical-align: middle;">
+</img></a>
+<a href="https://wa.me/4917695886665" rel="noopener" target="_blank">
+<img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 24px; vertical-align: middle;"/>
+</a>
+<a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&amp;_r=1" rel="noopener" target="_blank">
+<img alt="TikTok" src="tiktok-icon.png" style="width: 24px; vertical-align: middle;"/>
+</a>
+<a class="footer-icon" href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" target="_blank">
+<img alt="Kleinanzeigen" src="kleinanzeigen.svg" style="width: 24px; height: 24px;"/>
 </a>
 </div>
-
-
 <script>
   // Lightbox für Galerie
   document.querySelectorAll('.gallery-thumb').forEach(img => {
@@ -374,8 +287,6 @@
     document.getElementById("slideshow-image").src = slideshowImages[currentSlide];
   }, 3000);
 </script>
-
-
 <script>
   const sound = document.getElementById("bg-sound");
   const startSoundOnce = () => {
@@ -384,23 +295,6 @@
   };
   document.addEventListener("click", startSoundOnce);
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
 window.onload = () => {
   const rightImages = [
@@ -429,6 +323,5 @@ window.onload = () => {
   }, 3000);
 };
 </script>
-
 </body>
 </html>
