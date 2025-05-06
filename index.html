@@ -416,20 +416,18 @@
 </style>
 </head>
 <body>
-<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png"/><div class="logo-textbox">3D IN – wir drucken’s!
+<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="position: absolute; left: 2%; top: 2%; width: 18vw; max-width: 200px;" /><div class="logo-textbox">3D IN – wir drucken’s!
 Ob Prototyp, Deko oder Geschenk mit Wow-Effekt – nachhaltig &amp; regional.
 Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
-<div class="hexagon-wrapper hexagon-left">
-<div class="hexagon">
-<img alt="Slideshow Bild Links" id="slideshow-image-left" src="11.png"/>
+
+
+
+<div class="hexagon-wrapper" style="position: absolute; top: 15%; left: 50%; transform: translateX(-50%);">
+  <div class="hexagon" style="width: 30vw; max-width: 420px;">
+    <img id="slideshow-central" src="24.png" alt="Slideshow Bild Zentral" />
+  </div>
 </div>
 
-</div>
-<div class="hexagon-wrapper">
-<div class="hexagon">
-<img alt="Slideshow Bild" id="slideshow-image" src="1.png"/>
-</div>
-</div>
 <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
 <a href="legal.html">Rechtliches</a>
 <a href="kontakt.html">Kontakt</a>
@@ -446,34 +444,19 @@ Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
 <img alt="TikTok" src="tiktok-icon.png" style="width: 24px; vertical-align: middle;"/>
 <span class="icon-label">TikTok</span></a>
 </div>
+
 <script>
 window.onload = () => {
-  const rightImages = [
-    "1.png", "2.png", "3.png", "4.png", "5.png",
-    "6.png", "7.png", "8.png", "9.png", "10.png"
-  ];
-  const leftImages = [
-    "11.png", "12.png", "13.png", "14.png", "15.png",
-    "16.png", "17.png", "18.png", "19.png", "20.png"
-  ];
-
-  let rightIndex = 0;
-  let leftIndex = 0;
-
-  const rightImg = document.getElementById("slideshow-image");
-  const leftImg = document.getElementById("slideshow-image-left");
-
+  const images = ['24.png', '4.png', '35.png', '14.png', '23.png', '21.png', '30.png', '31.png', '25.png', '1.png', '27.png', '20.png', '7.png', '13.png', '17.png', '26.png', '3.png', '12.png', '15.png', '19.png', '6.png', '32.png', '8.png', '5.png', '28.png', '33.png', '2.png', '11.png', '9.png', '10.png', '22.png', '16.png', '18.png', '29.png', '34.png'];
+  let index = 0;
+  const img = document.getElementById("slideshow-central");
   setInterval(() => {
-    rightIndex = (rightIndex + 1) % rightImages.length;
-    rightImg.src = rightImages[rightIndex];
-  }, 3000);
-
-  setInterval(() => {
-    leftIndex = (leftIndex + 1) % leftImages.length;
-    leftImg.src = leftImages[leftIndex];
+    index = (index + 1) % images.length;
+    img.src = images[index];
   }, 3000);
 };
 </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo");
