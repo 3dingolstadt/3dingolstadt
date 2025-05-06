@@ -423,6 +423,13 @@
 
 </div>
 
+
+<div class="square-wrapper" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+  <div class="square" style="width: 40vw; max-width: 550px; aspect-ratio: 1 / 1; border: 3px solid; border-image: linear-gradient(45deg, #ff3, #0cf, #fc0, #f0f, #3ff) 1; box-sizing: border-box; overflow: hidden;">
+    <img id="slideshow-central" src="4.png" alt="Slideshow Bild" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+  </div>
+</div>
+
 <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
 <a href="legal.html">Rechtliches</a>
 <a href="kontakt.html">Kontakt</a>
@@ -440,9 +447,10 @@
 </a>
 </div>
 
+
 <script>
 window.onload = () => {
-  const images = ['7.png', '21.png', '17.png', '4.png', '23.png', '22.png', '3.png', '12.png', '8.png', '16.png', '31.png', '24.png', '30.png', '32.png', '33.png', '1.png', '20.png', '18.png', '29.png', '14.png', '26.png', '25.png', '13.png', '27.png', '11.png', '34.png', '10.png', '5.png', '35.png', '2.png', '28.png', '19.png', '9.png', '6.png', '15.png'];
+  const images = ['4.png', '2.png', '22.png', '16.png', '5.png', '27.png', '26.png', '15.png', '24.png', '13.png', '21.png', '23.png', '31.png', '20.png', '8.png', '25.png', '12.png', '33.png', '11.png', '6.png', '29.png', '7.png', '19.png', '10.png', '34.png', '3.png', '17.png', '14.png', '9.png', '1.png', '35.png', '18.png', '28.png', '32.png', '30.png'];
   let index = 0;
   const img = document.getElementById("slideshow-central");
   setInterval(() => {
@@ -451,6 +459,7 @@ window.onload = () => {
   }, 3000);
 };
 </script>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
