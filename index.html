@@ -308,20 +308,6 @@
     display: none !important;
   }
 }
-
-/* Light Mode */
-body.light-mode {
-  background-color: #f1f1f1;
-  background-image: none;
-  color: #111;
-}
-body.light-mode .footer {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-body.light-mode a {
-  color: #111;
-}
-
 </style>
 <style>
 .marquee-container {
@@ -427,20 +413,6 @@ body.light-mode a {
     display: none !important;
   }
 }
-
-/* Light Mode */
-body.light-mode {
-  background-color: #f1f1f1;
-  background-image: none;
-  color: #111;
-}
-body.light-mode .footer {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-body.light-mode a {
-  color: #111;
-}
-
 </style>
 </head>
 <body>
@@ -458,12 +430,6 @@ body.light-mode a {
   </div>
 </div>
 
-
-<div id="image-info" style="display: none; position: absolute; top: 50%; left: calc(50% + 30vw); transform: translateY(-50%);
-  max-width: 250px; color: white; font-size: 0.9rem; text-align: left; z-index: 10;">
-  Alle Objekte sind selbst gedruckt – nur die Hintergründe wurden per KI erzeugt.
-</div>
-
 <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
 <a href="legal.html">Rechtliches</a>
 <a
@@ -471,7 +437,7 @@ body.light-mode a {
 <img alt="Instagram" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" style="width: 24px; vertical-align: middle;"/>
 <a
 <a class="footer-icon" href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" target="_blank" title="Kleinanzeigen">
-<img alt="Kleinanzeigen" src="kleinanzeigen.png" style="width: 24px; height: 24px;"/> 
+<img alt="Kleinanzeigen" src="kleinanzeigen.svg" style="width: 24px; height: 24px;"/> 
 <a href="https://wa.me/4917695886665" rel="noopener" target="_blank" title="WhatsApp">
 <img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 24px; vertical-align: middle;"/>
 </a>
@@ -481,98 +447,28 @@ body.light-mode a {
 </div>
 
 
-
-
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const images = ['13.png', '15.png', '10.png', '4.png', '34.png', '14.png', '23.png', '29.png', '25.png', '17.png', '33.png', '32.png', '31.png', '26.png', '35.png', '7.png', '20.png', '12.png', '1.png', '6.png', '28.png', '21.png', '9.png', '30.png', '8.png', '27.png', '22.png', '18.png', '3.png', '19.png', '24.png', '16.png', '5.png', '11.png', '2.png'];
+window.onload = () => {
+  const images = ['4.png', '2.png', '22.png', '16.png', '5.png', '27.png', '26.png', '15.png', '24.png', '13.png', '21.png', '23.png', '31.png', '20.png', '8.png', '25.png', '12.png', '33.png', '11.png', '6.png', '29.png', '7.png', '19.png', '10.png', '34.png', '3.png', '17.png', '14.png', '9.png', '1.png', '35.png', '18.png', '28.png', '32.png', '30.png'];
   let index = 0;
   const img = document.getElementById("slideshow-central");
-  const infoBox = document.getElementById("image-info");
-
   setInterval(() => {
     index = (index + 1) % images.length;
     img.src = images[index];
   }, 3000);
-
-  if (img && infoBox) {
-    img.addEventListener("click", () => {
-      infoBox.style.display = "block";
-      setTimeout(() => {
-        infoBox.style.display = "none";
-      }, 2000);
-    });
-  }
-});
+};
 </script>
-
-
-
-
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const images = ['13.png', '15.png', '10.png', '4.png', '34.png', '14.png', '23.png', '29.png', '25.png', '17.png', '33.png', '32.png', '31.png', '26.png', '35.png', '7.png', '20.png', '12.png', '1.png', '6.png', '28.png', '21.png', '9.png', '30.png', '8.png', '27.png', '22.png', '18.png', '3.png', '19.png', '24.png', '16.png', '5.png', '11.png', '2.png'];
-  let index = 0;
-  const img = document.getElementById("slideshow-central");
-  const infoBox = document.getElementById("image-info");
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    img.src = images[index];
-  }, 3000);
-
-  if (img && infoBox) {
-    img.addEventListener("click", () => {
-      infoBox.style.display = "block";
-      setTimeout(() => {
-        infoBox.style.display = "none";
-      }, 2000);
-    });
-  }
-});
-</script>
-
-
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const images = ['13.png', '15.png', '10.png', '4.png', '34.png', '14.png', '23.png', '29.png', '25.png', '17.png', '33.png', '32.png', '31.png', '26.png', '35.png', '7.png', '20.png', '12.png', '1.png', '6.png', '28.png', '21.png', '9.png', '30.png', '8.png', '27.png', '22.png', '18.png', '3.png', '19.png', '24.png', '16.png', '5.png', '11.png', '2.png'];
-  let index = 0;
-  const img = document.getElementById("slideshow-central");
-  const infoBox = document.getElementById("image-info");
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    img.src = images[index];
-  }, 3000);
-
-  if (img && infoBox) {
-    img.addEventListener("click", () => {
-      infoBox.style.display = "block";
-      setTimeout(() => {
-        infoBox.style.display = "none";
-      }, 2000);
-    });
-  }
-});
-</script>
-
-
 
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo");
-  if (logo) {
+  const textbox = document.querySelector(".logo-textbox");
+  if (logo && textbox) {
     logo.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
+      textbox.classList.toggle("active");
     });
   }
 });
-</script>
-
-</body>
+</script></body>
 </html>
