@@ -404,7 +404,7 @@
 </style>
 </head>
 <body>
-<audio id="bg-sound" preload="auto" src="3d-printer-85253.mp3"></audio>
+
 <img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png"/><div class="logo-textbox">3D IN – wir drucken’s!
 Ob Prototyp, Deko oder Geschenk mit Wow-Effekt – nachhaltig &amp; regional.
 Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
@@ -435,14 +435,7 @@ Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
 <img alt="TikTok" src="tiktok-icon.png" style="width: 24px; vertical-align: middle;"/>
 <span class="icon-label">TikTok</span></a>
 </div>
-<script>
-  const sound = document.getElementById("bg-sound");
-  const startSoundOnce = () => {
-    sound.play().catch(e => console.log("Audio blocked:", e));
-    document.removeEventListener("click", startSoundOnce);
-  };
-  document.addEventListener("click", startSoundOnce);
-</script>
+
 <script>
 window.onload = () => {
   const rightImages = [
