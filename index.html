@@ -96,13 +96,7 @@
   overflow: hidden;
 }
 
-.hexagon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  aspect-ratio: 1 / 1;
-}
+
 
 
 
@@ -196,13 +190,7 @@
 
 /* Sanfte Überblendung */
 
-.hexagon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  aspect-ratio: 1 / 1;
-}
+
 
 
 
@@ -319,13 +307,7 @@
 }
 
 
-.hexagon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  aspect-ratio: 1 / 1;
-}
+
 
 
 </style>
@@ -435,29 +417,25 @@
 }
 
 
-.hexagon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  aspect-ratio: 1 / 1;
-}
+
 
 
 </style>
 </head>
 <body>
-<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="position: absolute; left: 2%; top: 2%; width: 18vw; max-width: 200px;" /><div class="logo-textbox">3D IN – wir drucken’s!
+<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="position: absolute; left: 2%; top: 2%; width: 24vw; max-width: 200px;" /><div class="logo-textbox">3D IN – wir drucken’s!
 Ob Prototyp, Deko oder Geschenk mit Wow-Effekt – nachhaltig &amp; regional.
 Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
 
 
 
-<div class="hexagon-wrapper" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
-  <div class="hexagon" style="width: 40vw; max-width: 550px; border: 2px solid white; box-sizing: border-box; overflow: hidden;">
-    <img id="slideshow-central" src="24.png" alt="Slideshow Bild Zentral" />
+
+<div class="square-wrapper" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+  <div class="square" style="width: 40vw; max-width: 550px; aspect-ratio: 1 / 1; border: 2px solid #ccc; box-sizing: border-box; overflow: hidden;">
+    <img id="slideshow-central" src="1.png" alt="Slideshow Bild" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
   </div>
 </div>
+
 
 <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
 <a href="legal.html">Rechtliches</a>
