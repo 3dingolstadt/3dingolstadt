@@ -430,6 +430,12 @@
   </div>
 </div>
 
+
+<div id="image-info" style="display: none; position: absolute; top: 50%; left: calc(50% + 30vw); transform: translateY(-50%);
+  max-width: 250px; color: white; font-size: 0.9rem; text-align: left; z-index: 10;">
+  Alle Objekte sind selbst gedruckt – nur die Hintergründe wurden per KI erzeugt.
+</div>
+
 <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
 <a href="legal.html">Rechtliches</a>
 <a
@@ -470,5 +476,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-</script></body>
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slideshow = document.getElementById("slideshow-central");
+  const infoBox = document.getElementById("image-info");
+  if (slideshow && infoBox) {
+    slideshow.addEventListener("click", () => {
+      infoBox.style.display = infoBox.style.display === "block" ? "none" : "block";
+    });
+  }
+});
+</script>
+
+</body>
 </html>
