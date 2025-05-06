@@ -73,22 +73,7 @@
       vertical-align: middle;
     }
   
-/* Galerie: Quadratisch, klickbar */
-.gallery-grid {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-.gallery-thumb {
-  width: 256px;
-  height: 256px;
-  object-fit: contain; max-width: 90%; max-height: 90%;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.gallery-thumb:hover {
-  transform: scale(1.05);
-}
+
 
 /* Hexagon-Rahmen */
 .hexagon-wrapper {
@@ -118,15 +103,33 @@
 
 
 @media (max-width: 768px) {
-  .gallery-grid {
-    flex-direction: column;
-    align-items: center;
+  .logo {
+    display: block;
+    width: 60vw;
+    margin: 1rem auto;
   }
+  .logo-textbox {
+    display: block;
+    position: static;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 90vw;
+  }
+  .hexagon-wrapper {
+    position: static;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .hexagon {
+    width: 65vw;
+    max-width: 90vw;
+  }
+  
 
-  .gallery-thumb {
-    width: 80vw;
-    height: auto;
-  }
+  
 
   .hexagon-wrapper {
     position: static;
@@ -147,6 +150,30 @@
   left: 8%;
 }
 @media (max-width: 768px) {
+  .logo {
+    display: block;
+    width: 60vw;
+    margin: 1rem auto;
+  }
+  .logo-textbox {
+    display: block;
+    position: static;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 90vw;
+  }
+  .hexagon-wrapper {
+    position: static;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .hexagon {
+    width: 65vw;
+    max-width: 90vw;
+  }
   .hexagon-left {
     position: static;
     margin-top: 2rem;
@@ -216,6 +243,30 @@
   margin: 1rem auto;
 }
 @media (max-width: 768px) {
+  .logo {
+    display: block;
+    width: 60vw;
+    margin: 1rem auto;
+  }
+  .logo-textbox {
+    display: block;
+    position: static;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 90vw;
+  }
+  .hexagon-wrapper {
+    position: static;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .hexagon {
+    width: 65vw;
+    max-width: 90vw;
+  }
   .logo-mobile {
     display: block;
   }
@@ -280,6 +331,30 @@
   100% { transform: translateX(-100%); }
 }
 @media (max-width: 768px) {
+  .logo {
+    display: block;
+    width: 60vw;
+    margin: 1rem auto;
+  }
+  .logo-textbox {
+    display: block;
+    position: static;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 90vw;
+  }
+  .hexagon-wrapper {
+    position: static;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .hexagon {
+    width: 65vw;
+    max-width: 90vw;
+  }
   .marquee-container {
   color: white;
     font-size: 0.9rem;
@@ -294,6 +369,30 @@
   margin: 1rem auto;
 }
 @media (max-width: 768px) {
+  .logo {
+    display: block;
+    width: 60vw;
+    margin: 1rem auto;
+  }
+  .logo-textbox {
+    display: block;
+    position: static;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 90vw;
+  }
+  .hexagon-wrapper {
+    position: static;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .hexagon {
+    width: 65vw;
+    max-width: 90vw;
+  }
   .logo-mobile {
     display: block;
   }
@@ -336,44 +435,6 @@ Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
 <img alt="TikTok" src="tiktok-icon.png" style="width: 24px; vertical-align: middle;"/>
 <span class="icon-label">TikTok</span></a>
 </div>
-<script>
-  // Lightbox für Galerie
-  document.querySelectorAll('.gallery-thumb').forEach(img => {
-    img.addEventListener('click', () => {
-      const overlay = document.createElement('div');
-      overlay.style.position = 'fixed';
-      overlay.style.top = 0;
-      overlay.style.left = 0;
-      overlay.style.width = '100vw';
-      overlay.style.height = '100vh';
-      overlay.style.background = 'rgba(0,0,0,0.8)';
-      overlay.style.display = 'flex';
-      overlay.style.alignItems = 'center';
-      overlay.style.justifyContent = 'center';
-      overlay.style.zIndex = 9999;
-
-      const fullImg = document.createElement('img');
-      fullImg.src = img.src;
-      fullImg.style.maxWidth = '90vw';
-      fullImg.style.maxHeight = '90vh';
-      overlay.appendChild(fullImg);
-
-      overlay.addEventListener('click', () => overlay.remove());
-      document.body.appendChild(overlay);
-    });
-  });
-
-  // Slideshow für Hexagon
-  const slideshowImages = [
-    "1.png", "2.png", "3.png", "4.png", "5.png",
-    "6.png", "7.png", "8.png", "9.png", "10.png"
-  ];
-  let currentSlide = 0;
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % slideshowImages.length;
-    document.getElementById("slideshow-image").src = slideshowImages[currentSlide];
-  }, 3000);
-</script>
 <script>
   const sound = document.getElementById("bg-sound");
   const startSoundOnce = () => {
