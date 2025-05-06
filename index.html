@@ -1,12 +1,11 @@
 
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-<title>3DIN</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3DIN</title>
+  <style>
     body {
       margin: 0;
       background: url('background.png') no-repeat center center fixed;
@@ -20,7 +19,7 @@
     }
 
     .logo {
-      max-width: 28vw; max-width: 600px;
+      max-width: 650px;
       width: 80%;
       transition: filter 0.3s ease;
     }
@@ -32,7 +31,7 @@
     .footer {
       width: 100%;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       padding: 1rem 0;
     }
 
@@ -44,7 +43,7 @@
     }
 
     .footer img {
-      width: 22px;
+      width: 16px;
       vertical-align: middle;
     }
   
@@ -73,7 +72,7 @@
   transform: translateY(0%);
 }
 .hexagon {
-  width: 30vw; min-width: 180px; max-width: 400px;
+  width: 35vw;
   aspect-ratio: 1 / 1;
   background: linear-gradient(to bottom, #222, #444);
   clip-path: polygon(
@@ -92,7 +91,11 @@
 }
 
 
-
+@media (max-width: 768px) {
+  .gallery-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .gallery-thumb {
     width: 80vw;
@@ -107,7 +110,7 @@
   }
 
   .hexagon {
-    width: 30vw; min-width: 180px; max-width: 400px;
+    width: 80vw;
     max-width: 35vw;
   }
 }
@@ -117,7 +120,13 @@
   right: auto;
   left: 3%;
 }
-
+@media (max-width: 768px) {
+  .hexagon-left {
+    position: static;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 
@@ -135,27 +144,41 @@
 }
 
 
-
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 1rem 0;
+  }
 
   .hexagon {
-    width: 30vw; min-width: 180px; max-width: 400px;
+    width: 55vw !important;
   }
 
   .logo {
-    width: 28vw; max-width: 600px;
+    width: 40vw;
     margin: 1rem 0;
   }
 }
 
-
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2vw;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 2vw;
+  }
 
   .hexagon {
-    width: 30vw; min-width: 180px; max-width: 400px;
+    width: 28vw !important;
     max-width: none;
   }
 
   .logo {
-    width: 28vw; max-width: 600px;
+    width: 30vw;
     height: auto;
   }
 }
@@ -166,13 +189,17 @@
   width: 40vw;
   margin: 1rem auto;
 }
-
+@media (max-width: 768px) {
+  .logo-mobile {
+    display: block;
+  }
   .logo {
     display: none;
   }
 }
 
 </style>
+
 <style>
 .marquee-container {
   color: white;
@@ -200,7 +227,13 @@
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
-
+@media (max-width: 768px) {
+  .marquee-container {
+  color: white;
+    font-size: 0.9rem;
+    width: 90%;
+    left: 5%;
+  }
 }
 
 .logo-mobile {
@@ -208,7 +241,10 @@
   width: 40vw;
   margin: 1rem auto;
 }
-
+@media (max-width: 768px) {
+  .logo-mobile {
+    display: block;
+  }
   .logo {
     display: none;
   }
@@ -217,38 +253,52 @@
 </style>
 </head>
 <body>
-<audio id="bg-sound" preload="auto" src="3d-printer-85253.mp3"></audio>
+
+<audio id="bg-sound" src="3d-printer-85253.mp3" preload="auto"></audio>
+
+
 <div class="marquee-container">
-<div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
+  <div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
 </div>
-<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png"/>
+
+  
+<img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
+
 <div class="hexagon-wrapper hexagon-left">
-<div class="hexagon">
-<img alt="Slideshow Bild Links" id="slideshow-image-left" src="11.png"/>
+  <div class="hexagon">
+    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
+  </div>
+<img src="just_3DIN_Logo.png" alt="3DIN Logo Mobil" class="logo-mobile" />
 </div>
-<img alt="3DIN Logo Mobil" class="logo-mobile" src="just_3DIN_Logo.png">
-</img></div>
+
+
 <div class="hexagon-wrapper">
-<div class="hexagon">
-<img alt="Slideshow Bild" id="slideshow-image" src="1.png"/>
+  <div class="hexagon">
+    <img id="slideshow-image" src="1.png" alt="Slideshow Bild">
+  </div>
 </div>
+
+  
+  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
+    <a href="legal.html">Rechtliches</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; vertical-align: middle;" />
+    </a>
+    <a href="https://wa.me/4917695886665" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; vertical-align: middle;" />
+    </a>
+    <a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&_r=1" target="_blank" rel="noopener">
+      <img src="tiktok-icon.png" alt="TikTok" style="width: 24px; vertical-align: middle;" />
+    </a>
+  
+<a href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" 
+   target="_blank" class="footer-icon">
+  <img src="kleinanzeigen.svg" alt="Kleinanzeigen" style="width: 24px; height: 24px;" />
+</a>
 </div>
-<div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
-<a href="legal.html">Rechtliches</a>
-<a href="kontakt.html">Kontakt</a>
-<a href="https://instagram.com/3d_ingolstadt" rel="noopener" target="_blank">
-<img alt="Instagram" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" style="width: 24px; vertical-align: middle;">
-</img></a>
-<a href="https://wa.me/4917695886665" rel="noopener" target="_blank">
-<img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 24px; vertical-align: middle;"/>
-</a>
-<a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&amp;_r=1" rel="noopener" target="_blank">
-<img alt="TikTok" src="tiktok-icon.png" style="width: 24px; vertical-align: middle;"/>
-</a>
-<a class="footer-icon" href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" target="_blank">
-<img alt="Kleinanzeigen" src="kleinanzeigen.svg" style="width: 24px; height: 24px;"/>
-</a>
-</div>
+
+
 <script>
   // Lightbox für Galerie
   document.querySelectorAll('.gallery-thumb').forEach(img => {
@@ -287,6 +337,8 @@
     document.getElementById("slideshow-image").src = slideshowImages[currentSlide];
   }, 3000);
 </script>
+
+
 <script>
   const sound = document.getElementById("bg-sound");
   const startSoundOnce = () => {
@@ -295,6 +347,23 @@
   };
   document.addEventListener("click", startSoundOnce);
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 window.onload = () => {
   const rightImages = [
@@ -323,5 +392,6 @@ window.onload = () => {
   }, 3000);
 };
 </script>
+
 </body>
 </html>
