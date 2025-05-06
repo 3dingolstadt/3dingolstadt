@@ -302,6 +302,12 @@
   opacity: 1;
   transform: translateX(-50%) translateY(-4px);
 }
+
+@media (max-width: 768px) {
+  .hexagon-wrapper:not(.hexagon-left) {
+    display: none !important;
+  }
+}
 </style>
 <style>
 .marquee-container {
@@ -401,10 +407,15 @@
   }
 }
 
+
+@media (max-width: 768px) {
+  .hexagon-wrapper:not(.hexagon-left) {
+    display: none !important;
+  }
+}
 </style>
 </head>
 <body>
-
 <img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png"/><div class="logo-textbox">3D IN – wir drucken’s!
 Ob Prototyp, Deko oder Geschenk mit Wow-Effekt – nachhaltig &amp; regional.
 Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
@@ -412,7 +423,7 @@ Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
 <div class="hexagon">
 <img alt="Slideshow Bild Links" id="slideshow-image-left" src="11.png"/>
 </div>
-<img alt="3DIN Logo Mobil" class="logo-mobile" src="just_3DIN_Logo.png"/>
+
 </div>
 <div class="hexagon-wrapper">
 <div class="hexagon">
@@ -435,7 +446,6 @@ Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
 <img alt="TikTok" src="tiktok-icon.png" style="width: 24px; vertical-align: middle;"/>
 <span class="icon-label">TikTok</span></a>
 </div>
-
 <script>
 window.onload = () => {
   const rightImages = [
