@@ -1,11 +1,28 @@
 
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3DIN</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>3DIN</title>
+<style>
+#led-counter {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #0f0f0f;
+  color: #33ff33;
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  padding: 0.4rem 0.6rem;
+  border: 2px inset #333;
+  box-shadow: 0 0 8px #33ff33;
+  z-index: 1000;
+}
+
+
     body {
       margin: 0;
       background: url('background.png') no-repeat center center fixed;
@@ -199,7 +216,6 @@
 }
 
 </style>
-
 <style>
 .marquee-container {
   color: white;
@@ -253,52 +269,38 @@
 </style>
 </head>
 <body>
-
-<audio id="bg-sound" src="3d-printer-85253.mp3" preload="auto"></audio>
-
-
+<audio id="bg-sound" preload="auto" src="3d-printer-85253.mp3"></audio>
 <div class="marquee-container">
-  <div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
+<div class="marquee">3D IN – wir drucken’s! Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt: Wir bringen deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß. Dekoration. Vision. Präzision. Direkt aus Ingolstadt – klar machen wir das!</div>
 </div>
-
-  
-<img src="just_3DIN_Logo.png" alt="3DIN Logo" class="logo" />
-
+<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png"/>
 <div class="hexagon-wrapper hexagon-left">
-  <div class="hexagon">
-    <img id="slideshow-image-left" src="11.png" alt="Slideshow Bild Links">
-  </div>
-<img src="just_3DIN_Logo.png" alt="3DIN Logo Mobil" class="logo-mobile" />
+<div class="hexagon">
+<img alt="Slideshow Bild Links" id="slideshow-image-left" src="11.png"/>
 </div>
-
-
+<img alt="3DIN Logo Mobil" class="logo-mobile" src="just_3DIN_Logo.png">
+</img></div>
 <div class="hexagon-wrapper">
-  <div class="hexagon">
-    <img id="slideshow-image" src="1.png" alt="Slideshow Bild">
-  </div>
+<div class="hexagon">
+<img alt="Slideshow Bild" id="slideshow-image" src="1.png"/>
 </div>
-
-  
-  <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
-    <a href="legal.html">Rechtliches</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="https://instagram.com/3d_ingolstadt" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; vertical-align: middle;" />
-    </a>
-    <a href="https://wa.me/4917695886665" target="_blank" rel="noopener">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; vertical-align: middle;" />
-    </a>
-    <a href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" 
-   target="_blank" class="footer-icon">
-  <img src="kleinanzeigen.svg" alt="Kleinanzeigen" style="width: 24px; height: 24px;" />
+</div>
+<div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
+<a href="legal.html">Rechtliches</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="https://instagram.com/3d_ingolstadt" rel="noopener" target="_blank">
+<img alt="Instagram" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" style="width: 24px; vertical-align: middle;">
+</img></a>
+<a href="https://wa.me/4917695886665" rel="noopener" target="_blank">
+<img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 24px; vertical-align: middle;"/>
 </a>
-    <a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&_r=1" target="_blank" rel="noopener">
-      <img src="tiktok-icon.png" alt="TikTok" style="width: 24px; vertical-align: middle;" />
-    </a>
-
+<a href="https://www.tiktok.com/@3d_ingolstadt?_t=ZN-8vnYF5s9Fm2&amp;_r=1" rel="noopener" target="_blank">
+<img alt="TikTok" src="tiktok-icon.png" style="width: 24px; vertical-align: middle;"/>
+</a>
+<a class="footer-icon" href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" target="_blank">
+<img alt="Kleinanzeigen" src="kleinanzeigen.svg" style="width: 24px; height: 24px;"/>
+</a>
 </div>
-
-
 <script>
   // Lightbox für Galerie
   document.querySelectorAll('.gallery-thumb').forEach(img => {
@@ -337,8 +339,6 @@
     document.getElementById("slideshow-image").src = slideshowImages[currentSlide];
   }, 3000);
 </script>
-
-
 <script>
   const sound = document.getElementById("bg-sound");
   const startSoundOnce = () => {
@@ -347,23 +347,6 @@
   };
   document.addEventListener("click", startSoundOnce);
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
 window.onload = () => {
   const rightImages = [
@@ -393,5 +376,14 @@ window.onload = () => {
 };
 </script>
 
+<div id="led-counter">
+<div id="sfcturhurzjrg5ypkyzmqh8ertz5qnlr1fn"></div>
+</div>
+<script async="" src="https://counter4.optistats.ovh/private/counter.js?c=turhurzjrg5ypkyzmqh8ertz5qnlr1fn&amp;down=async" type="text/javascript"></script>
+<noscript>
+<a href="https://www.freecounterstat.com" title="free website counter">
+<img alt="free website counter" border="0" src="https://counter4.optistats.ovh/private/freecounterstat.php?c=turhurzjrg5ypkyzmqh8ertz5qnlr1fn" title="free website counter"/>
+</a>
+</noscript>
 </body>
 </html>
