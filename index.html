@@ -4,7 +4,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=1024" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
 <title>3DIN</title>
 <style>
     body {
@@ -20,7 +20,7 @@
     }
 
     .logo {
-      max-width: clamp(200px, 30vw, 650px);
+      max-width: 28vw; max-width: 600px;
       width: 80%;
       transition: filter 0.3s ease;
     }
@@ -32,7 +32,7 @@
     .footer {
       width: 100%;
       text-align: center;
-      font-size: clamp(0.8rem, 1vw, 1rem);
+      font-size: 0.9rem;
       padding: 1rem 0;
     }
 
@@ -44,7 +44,7 @@
     }
 
     .footer img {
-      width: 16px;
+      width: 22px;
       vertical-align: middle;
     }
   
@@ -73,7 +73,7 @@
   transform: translateY(0%);
 }
 .hexagon {
-  width: clamp(150px, 30vw, 400px);
+  width: 30vw; min-width: 180px; max-width: 400px;
   aspect-ratio: 1 / 1;
   background: linear-gradient(to bottom, #222, #444);
   clip-path: polygon(
@@ -107,7 +107,7 @@
   }
 
   .hexagon {
-    width: clamp(150px, 30vw, 400px);
+    width: 30vw; min-width: 180px; max-width: 400px;
     max-width: 35vw;
   }
 }
@@ -138,11 +138,11 @@
 
 
   .hexagon {
-    width: clamp(150px, 30vw, 400px);
+    width: 30vw; min-width: 180px; max-width: 400px;
   }
 
   .logo {
-    width: clamp(200px, 30vw, 650px);
+    width: 28vw; max-width: 600px;
     margin: 1rem 0;
   }
 }
@@ -150,12 +150,12 @@
 
 
   .hexagon {
-    width: clamp(150px, 30vw, 400px);
+    width: 30vw; min-width: 180px; max-width: 400px;
     max-width: none;
   }
 
   .logo {
-    width: clamp(200px, 30vw, 650px);
+    width: 28vw; max-width: 600px;
     height: auto;
   }
 }
@@ -186,7 +186,7 @@
   left: 12.5%;
   background: url('background.png') no-repeat center center fixed;
       background-size: cover;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: 1rem;
   padding: 0.5rem 0;
   z-index: 999;
 }
