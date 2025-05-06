@@ -423,7 +423,7 @@
 </style>
 </head>
 <body>
-<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="position: absolute; left: 2%; top: 2%; width: 24vw; max-width: 200px;" /><div class="logo-textbox">3D IN – wir drucken’s!
+<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="position: absolute; left: 2%; top: 2%; width: 48vw; max-width: 200px;" /><div class="logo-textbox">3D IN – wir drucken’s!
 Ob Prototyp, Deko oder Geschenk mit Wow-Effekt – nachhaltig &amp; regional.
 Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
 
@@ -436,6 +436,27 @@ Vision. Präzision. Direkt aus Ingolstadt – direkt aus der Region.</div>
   </div>
 </div>
 
+
+
+<div id="logo-text" style="
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+  max-width: 20vw;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: none;
+  text-align: right;
+  z-index: 10;
+">
+  <p>3D-Druck<br>
+  individuelle Bauteile<br>
+  Entwurf + Konstruktion<br>
+  PLA, PETG, TPU u. a.<br>
+  schnelle Umsetzung<br>
+  Einzel- & Serienfertigung</p>
+</div>
 
 <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem 0;">
 <a href="legal.html">Rechtliches</a>
@@ -476,5 +497,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-</script></body>
+</script>
+<script>
+  const logo = document.querySelector('.logo');
+  const info = document.getElementById('logo-text');
+  logo.addEventListener('mouseenter', () => { info.style.display = 'block'; });
+  logo.addEventListener('mouseleave', () => { info.style.display = 'none'; });
+</script>
+
+</body>
 </html>
