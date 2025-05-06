@@ -10,7 +10,7 @@
     body {
       margin: 0;
       background-color: #1a1a1a;
-      background-image: url('background.png');
+      background-image: url('background.png.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -49,15 +49,17 @@
       object-fit: cover;
       display: block;
     }
-    .footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #000;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-    }
+    
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
   
 html, body {
   height: 100%;
@@ -74,9 +76,28 @@ html, body {
     </div>
   </div>
 
-  <div class="footer">
-    <p>© 2025 3DIN – Alle Rechte vorbehalten</p>
+  
+<div class="footer">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; color: white;">
+    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+      <img src="instagram.svg" alt="Instagram" style="width: 24px; height: 24px;" />
+    </a>
+    <a href="https://www.tiktok.com" target="_blank" title="TikTok">
+      <img src="tiktok.svg" alt="TikTok" style="width: 24px; height: 24px;" />
+    </a>
+    <a href="https://wa.me/491234567890" target="_blank" title="WhatsApp">
+      <img src="whatsapp.svg" alt="WhatsApp" style="width: 24px; height: 24px;" />
+    </a>
+    <a href="https://www.kleinanzeigen.de/s-anzeige/3d-druck-dienstleistungen-entwuerfe-konstruktionen-drucke/3075605250-168-7615" target="_blank" title="Kleinanzeigen">
+      <img src="kleinanzeigen.svg" alt="Kleinanzeigen" style="width: 24px; height: 24px;" />
+    </a>
   </div>
+  <div style="margin-top: 0.5rem;">
+    <a href="#rechtliches" style="color: white; margin-right: 1.5rem;">Rechtliches</a>
+    <a href="#kontakt" style="color: white;">Kontakt</a>
+  </div>
+</div>
+
 
   <script>
     const images = Array.from({length: 35}, (_, i) => `${i + 1}.png`).sort(() => 0.5 - Math.random());
