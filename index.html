@@ -75,126 +75,8 @@
   
 
 
-/* Hexagon-Rahmen */
-.hexagon-wrapper {
-  position: absolute;
-  top: 20%; /* anpassbar je nach Logo-Position */
-  right: 10%;
-  transform: translateY(0%);
-}
-.hexagon {
-  width: 19.25vw;
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(to bottom, #222, #444);
-  clip-path: polygon(
-    50% 0%, 93% 25%, 93% 75%, 50% 100%,
-    7% 75%, 7% 25%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.hexagon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; max-width: 90%; max-height: 90%;
-}
 
 
-@media (max-width: 768px) {
-  .logo {
-    display: block;
-    width: 60vw;
-    margin: 1rem auto;
-  }
-  .logo-textbox {
-    display: block;
-    position: static;
-    margin: 1rem auto;
-    padding: 1rem;
-    font-size: 1rem;
-    text-align: center;
-    width: 90vw;
-  }
-  .hexagon-wrapper {
-    position: static;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-  }
-  .hexagon {
-    width: 65vw;
-    max-width: 90vw;
-  }
-  
-
-  
-
-  .hexagon-wrapper {
-    position: static;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .hexagon {
-  width: 44vw;
-    max-width: 35vw;
-  }
-}
-
-
-.hexagon-left {
-  right: auto;
-  left: 8%;
-}
-@media (max-width: 768px) {
-  .logo {
-    display: block;
-    width: 60vw;
-    margin: 1rem auto;
-  }
-  .logo-textbox {
-    display: block;
-    position: static;
-    margin: 1rem auto;
-    padding: 1rem;
-    font-size: 1rem;
-    text-align: center;
-    width: 90vw;
-  }
-  .hexagon-wrapper {
-    position: static;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-  }
-  .hexagon {
-    width: 65vw;
-    max-width: 90vw;
-  }
-  .hexagon-left {
-    position: static;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-
-.hexagon-left img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-
-/* Sanfte Überblendung */
-.hexagon img {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
 
 
 @media (max-width: 1024px) and (orientation: portrait) {
@@ -205,9 +87,7 @@
     padding: 1rem 0;
   }
 
-  .hexagon {
-  width: 30.25vw !important;
-  }
+  
 
   .logo {
     width: 40vw;
@@ -225,10 +105,7 @@
     padding: 0 2vw;
   }
 
-  .hexagon {
-  width: 15.4vw !important;
-    max-width: none;
-  }
+  
 
   .logo {
     width: 30vw;
@@ -257,16 +134,8 @@
     text-align: center;
     width: 90vw;
   }
-  .hexagon-wrapper {
-    position: static;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-  }
-  .hexagon {
-    width: 65vw;
-    max-width: 90vw;
-  }
+  
+  
   .logo-mobile {
     display: block;
   }
@@ -303,11 +172,7 @@
   transform: translateX(-50%) translateY(-4px);
 }
 
-@media (max-width: 768px) {
-  .hexagon-wrapper:not(.hexagon-left) {
-    display: none !important;
-  }
-}
+
 </style>
 <style>
 .marquee-container {
@@ -351,16 +216,8 @@
     text-align: center;
     width: 90vw;
   }
-  .hexagon-wrapper {
-    position: static;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-  }
-  .hexagon {
-    width: 65vw;
-    max-width: 90vw;
-  }
+  
+  
   .marquee-container {
   color: white;
     font-size: 0.9rem;
@@ -389,16 +246,8 @@
     text-align: center;
     width: 90vw;
   }
-  .hexagon-wrapper {
-    position: static;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-  }
-  .hexagon {
-    width: 65vw;
-    max-width: 90vw;
-  }
+  
+  
   .logo-mobile {
     display: block;
   }
@@ -408,11 +257,7 @@
 }
 
 
-@media (max-width: 768px) {
-  .hexagon-wrapper:not(.hexagon-left) {
-    display: none !important;
-  }
-}
+
 </style>
 </head>
 <body>
