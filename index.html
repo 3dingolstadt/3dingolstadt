@@ -525,5 +525,17 @@ window.onload = () => {
 };
 </script>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var canvas = document.querySelector(".slideshow-canvas");
+  if (canvas && window.innerWidth <= 768) {
+    canvas.style.width = "90vw";
+    canvas.style.height = "90vw";
+    canvas.width = window.innerWidth * 0.9;
+    canvas.height = window.innerWidth * 0.9;
+  }
+});
+</script>
 </body>
 </html>
