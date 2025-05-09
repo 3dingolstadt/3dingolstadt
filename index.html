@@ -297,8 +297,23 @@
 
 
 
+
+
+
+
 <style>
 @media (max-width: 768px) {
+  .mobile-logo-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .mobile-logo {
+    width: 50vw;
+    max-width: 300px;
+    height: auto;
+  }
+
   .content-wrapper {
     flex-direction: column !important;
     gap: 1rem !important;
@@ -327,7 +342,7 @@
     width: 100% !important;
     box-sizing: border-box !important;
     font-size: 0.9rem !important;
-    gap: 0.5rem !important;
+    gap: 0.25rem !important;
   }
 
   .footer .footer-left,
@@ -341,7 +356,7 @@
   }
 
   .footer .footer-center {
-    gap: 0.4rem !important;
+    gap: 0.25rem !important;
   }
 
   .footer img {
@@ -356,48 +371,51 @@
 </style>
 
 <style>
-@media (max-width: 768px) {
-  .mobile-logo-wrapper {
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
+@media (min-width: 769px) {
+  .desktop-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
   }
-  .mobile-logo {
-    width: 50vw;
+
+  .desktop-header .logo {
     max-width: 300px;
+    width: 20vw;
     height: auto;
+  }
+
+  .desktop-header .logo-textbox {
+    display: block;
+    width: 24vw;
+    max-width: 360px;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+    white-space: normal;
   }
 }
 </style>
 </head>
 <body>
-<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="position: absolute; left: 4vw; top: 50%; transform: translateY(-50%); width: 24vw; max-width: 250px;" />
 
-<div class="logo-textbox" style="
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: calc(50% + 25vw);
-  transform: translateY(-50%);
-  width: 24vw;
-  max-width: 360px;
-  color: white;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  text-align: left;
-  z-index: 1001;
-  background: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  white-space: normal;
-">
-  <strong>3D IN – wir drucken’s!</strong><br>
-  Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt:<br>
-  Wir bringen Deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß.<br>
-  <em>Dekoration. Vision. Präzision.</em><br>
-  Direkt und schnell, aus Ingolstadt.
+<div class="desktop-header">
+  <img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="max-width: 650px; width: 80%; transition: filter 0.3s ease;" />
+  <div class="logo-textbox active">
+    <strong>3D IN – wir drucken’s!</strong><br>
+    Ob High Tech Prototyp, Dekoration, witziges Schild, oder ein individualisiertes Geschenk mit Wow-Effekt:<br>
+    Wir bringen Deine Idee in Form – nachhaltig, regional und mit 'ner Prise Spaß.<br>
+    <em>Dekoration. Vision. Präzision.</em><br>
+    Direkt und schnell, aus Ingolstadt.
+  </div>
 </div>
+
 
 
 
@@ -408,9 +426,7 @@
 
 
 
-<div class="mobile-logo-wrapper">
-  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="mobile-logo" />
-</div>
+
 
 <div class="content-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 2rem; position: relative; z-index: 1;">
   <div class="square" style="width: 40vw; max-width: 550px; aspect-ratio: 1 / 1; border: 3px solid; border-image: linear-gradient(45deg, #ff3, #0cf, #fc0, #f0f, #3ff) 1; box-sizing: border-box; overflow: hidden;">
