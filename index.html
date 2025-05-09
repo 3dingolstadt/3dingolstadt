@@ -293,77 +293,56 @@
 
 
 
-
-
-
-
-
-
-
-
 <style>
 @media (max-width: 768px) {
-  .mobile-logo-wrapper {
-    width: 100%;
-    text-align: center;
+  .logo-container {
     margin-top: 1rem;
-  }
-  .mobile-logo {
-    width: 50vw;
-    max-width: 300px;
-    height: auto;
-  }
-
-  .content-wrapper {
-    flex-direction: column !important;
-    gap: 1rem !important;
-  }
-
-  .square {
-    width: 90vw !important;
-    max-width: 90vw !important;
+    width: 95% !important;
+    max-width: 95% !important;
     height: auto !important;
-    aspect-ratio: 1 / 1 !important;
   }
-
-  #slideshow-central {
+  .logo-container img {
     width: 100% !important;
     height: auto !important;
-    object-fit: cover;
   }
-
+  .slideshow-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem auto !important;
+  }
+  .slideshow-container canvas,
+  .slideshow-container img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
   .footer {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    flex-wrap: nowrap !important;
-    padding: 0.6rem 1rem !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    font-size: 0.9rem !important;
-    gap: 0.25rem !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0.6rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.9rem;
   }
-
   .footer .footer-left,
   .footer .footer-center,
   .footer .footer-right {
-    flex: 1 1 auto !important;
-    justify-content: center !important;
-    display: flex !important;
-    align-items: center !important;
-    text-align: center !important;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
-
   .footer .footer-center {
-    gap: 0.25rem !important;
+    gap: 0.4rem;
   }
-
   .footer img {
-    height: 20px !important;
-    width: auto !important;
+    height: 20px;
+    width: auto;
   }
-
   .marquee-container {
     font-size: 1rem !important;
   }
@@ -371,7 +350,7 @@
 </style>
 </head>
 <body>
-<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="max-width: 650px; width: 80%; transition: filter 0.3s ease;" />
+<img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="position: absolute; left: 4vw; top: 50%; transform: translateY(-50%); width: 24vw; max-width: 250px;" />
 
 <div class="logo-textbox" style="
   display: none;
@@ -406,11 +385,6 @@
 </div>
 
 
-
-
-<div class="mobile-logo-wrapper">
-  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="mobile-logo" />
-</div>
 
 <div class="content-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 2rem; position: relative; z-index: 1;">
   <div class="square" style="width: 40vw; max-width: 550px; aspect-ratio: 1 / 1; border: 3px solid; border-image: linear-gradient(45deg, #ff3, #0cf, #fc0, #f0f, #3ff) 1; box-sizing: border-box; overflow: hidden;">
@@ -551,18 +525,5 @@ window.onload = () => {
 };
 </script>
 
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var canvas = (function(){
-  var c = document.querySelector(".slideshow-canvas");
-  if (canvas && window.innerWidth <= 768) {
-    canvas.style.width = "90vw";
-    canvas.style.height = "90vw";
-    canvas.width = window.innerWidth * 0.9;
-    canvas.height = window.innerWidth * 0.9;
-  }
-});
-</script>
 </body>
 </html>
