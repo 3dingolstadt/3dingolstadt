@@ -286,6 +286,48 @@
 
 
 </style>
+
+<style>
+@media (max-width: 768px) {
+  .logo-container {
+    margin-top: 2rem;
+    width: 90% !important;
+    max-width: 100% !important;
+  }
+  .logo-container img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .footer img {
+    height: 22px;
+    width: auto;
+  }
+  .marquee-container {
+    font-size: 1rem !important;
+  }
+}
+</style>
 </head>
 <body>
 <img alt="3DIN Logo" class="logo" src="just_3DIN_Logo.png" style="position: absolute; left: 4vw; top: 50%; transform: translateY(-50%); width: 24vw; max-width: 250px;" />
