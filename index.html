@@ -528,7 +528,8 @@ window.onload = () => {
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  var canvas = document.querySelector(".slideshow-canvas");
+  var canvas = (function(){
+  var c = document.querySelector(".slideshow-canvas");
   if (canvas && window.innerWidth <= 768) {
     canvas.style.width = "90vw";
     canvas.style.height = "90vw";
