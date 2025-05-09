@@ -295,6 +295,8 @@
 
 
 
+
+
 <style>
 @media (max-width: 768px) {
   .content-wrapper {
@@ -313,6 +315,57 @@
     width: 100% !important;
     height: auto !important;
     object-fit: cover;
+  }
+
+  .footer {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    padding: 0.6rem 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 0.9rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    flex: 1 1 auto !important;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer .footer-center {
+    gap: 0.4rem !important;
+  }
+
+  .footer img {
+    height: 20px !important;
+    width: auto !important;
+  }
+
+  .marquee-container {
+    font-size: 1rem !important;
+  }
+}
+</style>
+
+<style>
+@media (max-width: 768px) {
+  .mobile-logo-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .mobile-logo {
+    width: 50vw;
+    max-width: 300px;
+    height: auto;
   }
 }
 </style>
@@ -353,6 +406,11 @@
 </div>
 
 
+
+
+<div class="mobile-logo-wrapper">
+  <img src="just_3DIN_Logo.png" alt="3DIN Logo" class="mobile-logo" />
+</div>
 
 <div class="content-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 2rem; position: relative; z-index: 1;">
   <div class="square" style="width: 40vw; max-width: 550px; aspect-ratio: 1 / 1; border: 3px solid; border-image: linear-gradient(45deg, #ff3, #0cf, #fc0, #f0f, #3ff) 1; box-sizing: border-box; overflow: hidden;">
